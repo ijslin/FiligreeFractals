@@ -3,7 +3,7 @@ from PIL import Image
 import zipf.factories
 from zipf.factories import ZipfFromList
 
-image = Image.open(r"treeEdge.png")
+image = Image.open(r"treeEdge.jpeg")
 
 colors = []
 
