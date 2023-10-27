@@ -1,0 +1,26 @@
+import zipfPyCharm
+from zipfPyCharm import *
+
+
+def getZipfSlopes(image, results, depth):
+    if depth == 0:
+        results.append(get_zipf_gray_edge(image))
+    else:
+        quad1, quad2, quad3, quad4 = (zipfPyCharm.get_quadrants(image))
+        results.append(getZipfSlopes(quad1, result, depth - 1))
+        results.append(getZipfSlopes(quad2, result, depth - 1))
+        results.append(getZipfSlopes(quad3, result, depth - 1))
+        results.append(getZipfSlopes(quad4, result, depth - 1))
+
+        results.append(get_zipf_gray_edge(image))
+        print("do i get here")
+
+    # for i in range(len(results)):
+    #     if results[i] is Null:
+    #         results.remove(i)
+
+
+image1 = get_image("e-Fillegre.jpg")
+result = []
+getZipfSlopes(image1, result, 1)
+print(result)
