@@ -15,10 +15,6 @@ def getZipfSlopes(image, results, depth):
         results.append(get_zipf_gray_edge(image))
         print("do i get here")
 
-    # for i in range(len(results)):
-    #     if results[i] is Null:
-    #         results.remove(i)
-
 
 image1 = get_image("e-Fillegre.jpg")
 result = []
