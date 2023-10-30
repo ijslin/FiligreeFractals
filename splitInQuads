@@ -13,7 +13,6 @@ def getZipfSlopes(image, results, depth):
         getZipfSlopes(quad4, result, depth - 1)
 
         results.append(get_zipf_gray_edge(image))
-        print("do i get here")
 
 
 image1 = get_image("e-Fillegre.jpg")
