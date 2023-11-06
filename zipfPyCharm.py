@@ -98,20 +98,114 @@ def euclidean(a, b):
     return result
 
 
-def main():
-    image1 = get_image(r"images/filigrees/C1-2r-Opening V-cropped.jpeg")
-    image2 = get_image(r"images/filigrees/C1-2v & 4r-cropped.jpeg")
-    a = get_zipf_gray_edge(image1)
-    b = get_zipf_gray_edge(image2)
+def recursive(image, list, depth):
+    if depth == 0:
+        list.append(get_zipf_gray_edge(image))
+    else:
+        quad1, quad2, quad3, quad4 = get_quadrants(image)
+        recursive(quad1, list, depth - 1)
+        recursive(quad2, list, depth - 1)
+        recursive(quad3, list, depth - 1)
+        recursive(quad4, list, depth - 1)
 
-    print(a)
+        list.append(get_zipf_gray_edge(image))
+
+
+def recursive_test():
+    image = get_image(r"images/test_images/recursive_test.jpeg")
+    result = []
+    recursive(image, result, 1)
+    print("Recursive Output: ", result)
+
+    image1 = get_image(r"images/test_images/billmanaris.jpeg")
+    r1 = []
+    recursive(image1, r1, 1)
+    print("Arbitrary Image Zipf: ", r1[4])
+    print("Top Left Quadrant Zipf: ", result[0])
+
+    image2 = get_image(r"images/test_images/white-noise-1400x825.jpeg")
+    r2 = []
+    recursive(image2, r2, 1)
+    print("White Noise Zipf: ", r2[4])
+    print("Top Right Quadrant Zipf: ", result[1])
+
+    image3 = get_image(r"images/test_images/plain-black-background-02fh7564l8qq4m6d.jpeg")
+    r3 = []
+    recursive(image3, r3, 1)
+    print("Background with Blemish Zipf: ", r3[4])
+    print("Bottom Left Quadrant Zipf: ", result[2])
+
+    image4 = get_image(r"images/test_images/tree.jpeg")
+    r4 = []
+    recursive(image4, r4, 1)
+    print("Tree Zipf: ", r4[4])
+    print("Bottom Right Quadrant Zipf: ", result[3])
+
+
+def same_author():
+    links = [r"images/filigrees/Monaco/C1-2r-Opening V-cropped.jpg", r"images/filigrees/Monaco/C1-2v _ 4r-cropped.jpg",
+             r"images/filigrees/Monaco/C1-16r-S w mandorla-croppedA.jpg",
+             r"images/filigrees/Monaco/C1-16r-S w mandorla-croppedA.jpg",
+             r"images/filigrees/Monaco/C1-19v-20r-Magdalene-cropped.jpg",
+             r"images/filigrees/Monaco/C1-20v-21r-Magdanele hymn 2-cropped.jpg"]
+    filigree1 = get_image(r"images/filigrees/Monaco/C1-2r-Opening V-cropped.jpg")
+    links.remove(r"images/filigrees/Monaco/C1-2r-Opening V-cropped.jpg")
+
+    print("Author: Monaco")
+    test_number = 1
+
+    for link in links:
+        print("Test", test_number, ":")
+
+        filigree2 = get_image(link)
+
+        result1 = []
+        result2 = []
+
+        recursive(filigree1, result1, 1)
+        recursive(filigree2, result2, 1)
+
+        print("Filigree 1: ", result1)
+        print("Filigree 2: ", result2)
+
+        print("Euclidean Distance: ", euclidean(result1, result2))
+        test_number += 1
+        print()
+
+
+def different_authors():
+    filigree1 = get_image(r"images/filigrees/Monaco/C1-2r-Opening V-cropped.jpg")
+    filigree2 = get_image(r"images/filigrees/Roselli/C3-1v-Resurrection-6-E-cropped.jpeg")
+
+    print("Author of Filigree 1: Monaco")
+    print("Author of Filigree 2: Roselli")
+
+    result1 = []
+    result2 = []
+
+    recursive(filigree1, result1, 1)
+    recursive(filigree2, result2, 1)
+
+    print("Filigree 1: ", result1)
+    print("Filigree 2: ", result2)
+
+    print("Euclidean Distance: ", euclidean(result1, result2))
+
+
+def main():
+    print("Test of Recursive Algorithm with 4 Images:")
     print()
-    print(b)
+    recursive_test()
     print()
-    print(euclidean(a, b))
-    list1 = [(-1, 6), (6, -1), (1, 6)]
-    list2 = [(2, -7), (-7, 2), (2, 7)]
-    print(euclidean(list1, list2))
+
+    print("Test with Multiple Filigrees with the Same Known Author:")
+    print()
+    same_author()
+    print()
+
+    print("Test with 2 Filigrees with Different Known Authors:")
+    print()
+    different_authors()
 
 
 main()
