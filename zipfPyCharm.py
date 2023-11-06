@@ -148,7 +148,7 @@ def same_author():
              r"images/filigrees/Monaco/C1-16r-S w mandorla-croppedA.jpg",
              r"images/filigrees/Monaco/C1-19v-20r-Magdalene-cropped.jpg",
              r"images/filigrees/Monaco/C1-20v-21r-Magdanele hymn 2-cropped.jpg"]
-    filigree1 = get_image(r"images/filigrees/Monaco/C1-2r-Opening V-cropped.jpg")
+    filigree1 = get_image(links[0])
     links.remove(r"images/filigrees/Monaco/C1-2r-Opening V-cropped.jpg")
 
     print("Author: Monaco")
