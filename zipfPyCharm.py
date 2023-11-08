@@ -75,6 +75,13 @@ def get_zipf_gray_edge(image):
 
 
 def euclidean(a, b):
+    # Checks if first item in each list is a string and removes it if it is
+    if isinstance(a[0], str):
+        a.pop(0)
+
+    if isinstance(b[0], str):
+        b.pop(0)
+
     result = 0  # Holds the Euclidean distance for return
 
     # This if is to check if the parameters are for only the whole image and no quadrants
@@ -143,13 +150,21 @@ def recursive_test():
 
 
 def same_author():
-    links = [r"images/filigrees/Monaco/C1-2r-Opening V-cropped.jpg", r"images/filigrees/Monaco/C1-2v _ 4r-cropped.jpg",
+    links = [r"images/filigrees/Monaco/C1-2v _ 4r-cropped.jpg",
              r"images/filigrees/Monaco/C1-16r-S w mandorla-croppedA.jpg",
              r"images/filigrees/Monaco/C1-16r-S w mandorla-croppedS.jpg",
              r"images/filigrees/Monaco/C1-19v-20r-Magdalene-cropped.jpg",
-             r"images/filigrees/Monaco/C1-20v-21r-Magdanele hymn 2-cropped.jpg"]
-    filigree1 = get_image(links[0])
-    links.remove(r"images/filigrees/Monaco/C1-2r-Opening V-cropped.jpg")
+             r"images/filigrees/Monaco/C1-20v-21r-Magdanele hymn 2-cropped.jpg",
+             r"images/filigrees/Monaco/C1-20v-21r-Magdanele hymn 2-croppedE.jpg",
+             r"images/filigrees/Monaco/C1-21v-Mary Magdalene hymn 3-cropped.jpg",
+             r"images/filigrees/Monaco/C1-22v-E w filigree 2-cropped.jpg",
+             r"images/filigrees/Monaco/C1-23v-S-cropped.jpg",
+             r"images/filigrees/Monaco/C1-24v-Letter I-1-croppedR.jpg",
+             r"images/filigrees/Monaco/C1-24v-Letter I-1-croppedS.jpg",
+             r"images/filigrees/Monaco/C1-25v-Q-2-cropped.jpg",
+             r"images/filigrees/Monaco/C1-27v-S-2-cropped.jpg",
+             r"images/filigrees/Monaco/C1-28r-O completion-cropped.jpg"]
+    filigree1 = get_image(r"images/filigrees/Monaco/C1-2r-Opening V-cropped.jpg")
 
     print("Author: Monaco")
     test_number = 1
@@ -159,8 +174,8 @@ def same_author():
 
         filigree2 = get_image(link)
 
-        result1 = []
-        result2 = []
+        result1 = [r"images/filigrees/Monaco/C1-2r-Opening V-cropped.jpg"]
+        result2 = [link]
 
         recursive(filigree1, result1, 1)
         recursive(filigree2, result2, 1)
@@ -193,19 +208,19 @@ def different_authors():
 
 
 def main():
-    print("Test of Recursive Algorithm with 4 Images:")
-    print()
-    recursive_test()
-    print()
+    # print("Test of Recursive Algorithm with 4 Images:")
+    # print()
+    # recursive_test()
+    # print()
 
     print("Test with Multiple Filigrees with the Same Known Author:")
     print()
     same_author()
     print()
 
-    print("Test with 2 Filigrees with Different Known Authors:")
-    print()
-    different_authors()
+    # print("Test with 2 Filigrees with Different Known Authors:")
+    # print()
+    # different_authors()
 
 
 main()
