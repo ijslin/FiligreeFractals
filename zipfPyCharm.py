@@ -85,7 +85,7 @@ def get_zipf_gray_edge(image):
 
     slope, r2, yint = byRank(counts)  # Organizes list by rank and returns the slope, r2, and yint of the image
 
-    return slope, r2  # Returns only the slope and r2 as those are the only ones necessary for the Euclidean distance
+    return histogram, (slope, r2)  # Returns only the slope and r2 as those are the only ones necessary for the Euclidean distance
 
 
 def euclidean(a, b):
@@ -119,17 +119,31 @@ def euclidean(a, b):
     return result
 
 
+def get_zipf(histogram):
+    counts = list(histogram.values())  # creates a list using the histogram values
+
+    slope, r2, yint = byRank(counts)
+
+    return slope, r2
+
+
 def recursive(image, list, depth):
     if depth == 0:
-        list.append(get_zipf_gray_edge(image))
+        histogram, point = get_zipf_gray_edge(image)
+        list.append(point)
+        return histogram
     else:
         quad1, quad2, quad3, quad4 = get_quadrants(image)
-        recursive(quad1, list, depth - 1)
-        recursive(quad2, list, depth - 1)
-        recursive(quad3, list, depth - 1)
-        recursive(quad4, list, depth - 1)
+        histogram1 = recursive(quad1, list, depth - 1)
+        histogram2 = recursive(quad2, list, depth - 1)
+        histogram3 = recursive(quad3, list, depth - 1)
+        histogram4 = recursive(quad4, list, depth - 1)
 
-        list.append(get_zipf_gray_edge(image))
+        merge_dicts(histogram1, histogram2)
+        merge_dicts(histogram1, histogram3)
+        merge_dicts(histogram1, histogram4)
+
+        list.append(get_zipf(histogram1))
 
 
 def recursive_test():
@@ -476,26 +490,45 @@ def all_images():
     links = []
     get_all_links(links)
 
+    file = open("all_images_test.txt", "w")
+
+    # Outer loop gets one of the filigree images
     for i in range(len(links)):
-        print("Image", i + 1)
-        print()
+        print("Image", i + 1, file=file)
+        print("\n", file=file)
+
         filigree1 = get_image(links[i])
 
+        # Inner loop grabs the rest of the images to compare
         for j in range(len(links)):
-            if j <= i:
+            if j <= i:  # Skips an image if it is the same one or the two were compared in a previous test
                 continue
             else:
                 result1 = [links[i]]
                 recursive(filigree1, result1, 1)
 
-                filigree2 = get_image_color(links[j])
+                filigree2 = get_image(links[j])
                 result2 = [links[j]]
                 recursive(filigree2, result2, 1)
 
-                print("Filigree 1: ", result1)
-                print("Filigree 2: ", result2)
-                print("Euclidean Distance: ", euclidean(result1, result2))
-                print()
+                print("Filigree 1: ", result1, file=file)
+                print("Filigree 2: ", result2, file=file)
+                print("Euclidean Distance: ", euclidean(result1, result2), file=file)
+                print("\n", file=file)
+    file.close()
+
+
+def merge_dicts(dict1, dict2):
+    for entry in dict2:
+        # Adds the counts of same keys and creates new keys if they don't exist
+        dict1[entry] = dict1.get(entry, 0) + dict2.get(entry, 0)
+
+
+def dict_merge_test():
+    dict1 = {'a': 1, 'b': 2}
+    dict2 = {'a': 3, 'b': 4}
+    merge_dicts(dict1, dict2)
+    print(dict1)
 
 
 def main():
