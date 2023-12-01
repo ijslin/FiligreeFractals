@@ -1,0 +1,17 @@
+def addToCsv(result1, result2):
+
+    # Sets var first row as "fields" and following rows as "rows"
+    fields = "Slope, R2, Euclidean"
+    rows = result1, result2
+
+    # Name of CSV file TODO: Have as input from console
+    filename = "Corale Tests"
+
+    # writing to csv file
+    with open(filename, 'w') as csvfile:
+        # creating a csv writer object
+        csvwriter = csv.writer(csvfile)
+        # writing the fields
+        csvwriter.writerow(fields)
+        # writing the data rows
+        csvwriter.writerows(rows)
