@@ -531,8 +531,35 @@ def dict_merge_test():
     print(dict1)
 
 
+def get_vectors(image_type):
+    links = []
+    get_all_links(links)
+
+    for link in links:
+        results = []
+
+        if image_type == "edge":
+            image = get_image(link)
+            recursive(image, results, 1)
+            print(results)
+            print()
+        elif image_type == "gray":
+            image = get_image_gray(link)
+            recursive(image, results, 1)
+            print(results)
+            print()
+        elif image_type == "color":
+            image = get_image_color(link)
+            recursive(image, results, 1)
+            print(results)
+            print()
+        else:
+            print("Image type not supported! Please use 'edge' for edge-detection, 'gray' for grayscale, and 'color' "
+                  "for colored")
+
+
 def main():
-    all_images()
+    get_vectors("edge")
 
 
 main()
