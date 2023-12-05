@@ -4,6 +4,7 @@ from PIL import Image, ImageFilter
 from zipf import *
 from math import *
 import os
+import csv
 
 
 def count_shades(image):
@@ -534,28 +535,38 @@ def dict_merge_test():
 def get_vectors(image_type):
     links = []
     get_all_links(links)
+    rows = []
 
+    # Runs through all of the filigree images to get the zipf distribution recursively
     for link in links:
         results = []
 
+        # This if-else clause checks the parameter to determine what type of image to use whether edge detected,
+        # grayscaled, or colored; the last clause prints an error message if the parameter doesn't match the three
+        # options
         if image_type == "edge":
             image = get_image(link)
             recursive(image, results, 1)
-            print(results)
-            print()
         elif image_type == "gray":
             image = get_image_gray(link)
             recursive(image, results, 1)
-            print(results)
-            print()
         elif image_type == "color":
             image = get_image_color(link)
             recursive(image, results, 1)
-            print(results)
-            print()
         else:
             print("Image type not supported! Please use 'edge' for edge-detection, 'gray' for grayscale, and 'color' "
-                  "for colored")
+                  "for color")
+            break
+
+        # Adds all of the slope and r2 values gotten to a list of rows to be written to a csv file
+        for result in results:
+            row = [result[0], result[1]]
+            rows.append(row)
+
+    # Writes the rows to the csv file
+    with open("zipf_edge_detection.csv", "w") as file:
+        writer = csv.writer(file)
+        writer.writerows(rows)
 
 
 def main():
