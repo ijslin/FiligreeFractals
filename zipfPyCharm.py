@@ -91,11 +91,6 @@ def get_zipf_gray_edge(image):
 
 def euclidean(a, b):
     # Checks if first item in each list is a string and removes it if it is
-    if isinstance(a[0], str):
-        a.pop(0)
-
-    if isinstance(b[0], str):
-        b.pop(0)
 
     result = 0  # Holds the Euclidean distance for return
 
@@ -111,9 +106,12 @@ def euclidean(a, b):
         sum = 0
 
         for i in range(len(b)):
-            dx = b[i][0] - a[i][0]
-            dy = b[i][1] - a[i][1]
-            sum = sum + ((dx * dx) + (dy * dy))
+            if isinstance(a[i], str) | isinstance(b[i], str):
+                continue
+            else:
+                dx = b[i][0] - a[i][0]
+                dy = b[i][1] - a[i][1]
+                sum = sum + ((dx * dx) + (dy * dy))
 
         result = sqrt(sum)
 
@@ -569,8 +567,67 @@ def get_vectors(image_type):
         writer.writerows(rows)
 
 
+def all_images_quick(image_type):
+    links = []
+    get_all_links(links)
+    zipfs = []
+
+    # Runs through all of the filigree images to get the zipf distribution recursively
+    for link in links:
+        results = [link]
+
+        # This if-else clause checks the parameter to determine what type of image to use whether edge detected,
+        # grayscaled, or colored; the last clause prints an error message if the parameter doesn't match the three
+        # options
+        if image_type == "edge":
+            image = get_image(link)
+            recursive(image, results, 1)
+            zipfs.append(results)
+        elif image_type == "gray":
+            image = get_image_gray(link)
+            recursive(image, results, 1)
+            zipfs.append(results)
+        elif image_type == "color":
+            image = get_image_color(link)
+            recursive(image, results, 1)
+            zipfs.append(results)
+        else:
+            print("Image type not supported! Please use 'edge' for edge-detection, 'gray' for grayscale, and 'color' "
+                  "for color")
+            break
+
+    file = None  # Initializes the file as None
+
+    # What file will be created depends on the image type
+    if image_type == "edge":
+        file = open("edge_detection.txt", "w")
+    elif image_type == "gray":
+        file = open("grayscale.txt", "w")
+    elif image_type == "color":
+        file = open("color.txt", "w")
+
+    # Runs through the zipfs created to compare and writes the Euclidean distance to the file created before
+    for i in range(len(zipfs)):
+        a = zipfs[i]
+
+        if i < (len(zipfs) - 1):
+            print("Image", i + 1, file=file)
+            print(a, file=file)
+
+        for j in range(len(zipfs)):
+            if j <= i:
+                continue
+            else:
+                b = zipfs[j]
+                print(b, file=file)
+                print("Euclidean Distance: ", euclidean(a, b), file=file)
+                print("\n", file=file)
+
+    file.close()
+
+
 def main():
-    get_vectors("edge")
+    all_images_quick("color")
 
 
 main()
