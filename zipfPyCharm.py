@@ -537,7 +537,7 @@ def get_vectors(image_type):
 
     # Runs through all of the filigree images to get the zipf distribution recursively
     for link in links:
-        results = []
+        results = [link]
 
         # This if-else clause checks the parameter to determine what type of image to use whether edge detected,
         # grayscaled, or colored; the last clause prints an error message if the parameter doesn't match the three
@@ -557,24 +557,35 @@ def get_vectors(image_type):
             break
 
         # Adds all of the slope and r2 values gotten to a list of rows to be written to a csv file
+        # for result in results:
+            # row = [result[0], result[1]]
+            # rows.append(row)
+        row = []
+
         for result in results:
-            row = [result[0], result[1]]
-            rows.append(row)
+            if isinstance(result, str):
+                row.append(result)
+            else:
+                row.append(result[0])
+                row.append(result[1])
+
+        rows.append(row)
 
     file_name = ""  # Initializes the file name as an empty string
 
     # What file will be created depends on the image type
     if image_type == "edge":
-        file_name = "zipf_edge_detection.csv"
+        file_name = "zipf_edge_detection_v2.csv"
     elif image_type == "gray":
-        file_name = "zipf_grayscale.csv"
+        file_name = "zipf_grayscale_v2.csv"
     elif image_type == "color":
-        file_name = "zipf_color.csv"
+        file_name = "zipf_color_v2.csv"
 
     # Writes the rows to the csv file
     with open(file_name, "w") as file:
         writer = csv.writer(file)
-        writer.writerow(["slope", "r2"])
+        writer.writerow(["Image", "Slope Q1", "R2 Q1", "Slope Q2", "R2 Q2", "Slope Q3", "R2 Q3", "Slope Q4", "R2 Q4",
+                         "Slope Whole", "R2 Whole"])
         writer.writerows(rows)
 
 
