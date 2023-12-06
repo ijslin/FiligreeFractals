@@ -561,9 +561,20 @@ def get_vectors(image_type):
             row = [result[0], result[1]]
             rows.append(row)
 
+    file_name = ""  # Initializes the file name as an empty string
+
+    # What file will be created depends on the image type
+    if image_type == "edge":
+        file_name = "zipf_edge_detection.csv"
+    elif image_type == "gray":
+        file_name = "zipf_grayscale.csv"
+    elif image_type == "color":
+        file_name = "zipf_color.csv"
+
     # Writes the rows to the csv file
-    with open("zipf_edge_detection.csv", "w") as file:
+    with open(file_name, "w") as file:
         writer = csv.writer(file)
+        writer.writerow(["slope", "r2"])
         writer.writerows(rows)
 
 
@@ -596,16 +607,17 @@ def all_images_quick(image_type):
                   "for color")
             break
 
-    file = None  # Initializes the file as None
+    file_name = ""  # Initializes the file name as an empty string
 
     # What file will be created depends on the image type
     if image_type == "edge":
-        file = open("edge_detection.txt", "w")
+        file_name = "edge_detection.txt"
     elif image_type == "gray":
-        file = open("grayscale.txt", "w")
+        file_name = "grayscale.txt"
     elif image_type == "color":
-        file = open("color.txt", "w")
+        file_name = "color.txt"
 
+    file = open(file_name, "w")
     # Runs through the zipfs created to compare and writes the Euclidean distance to the file created before
     for i in range(len(zipfs)):
         a = zipfs[i]
@@ -627,7 +639,9 @@ def all_images_quick(image_type):
 
 
 def main():
-    all_images_quick("color")
+    get_vectors("edge")
+    get_vectors("gray")
+    get_vectors("color")
 
 
 main()
