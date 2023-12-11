@@ -1,0 +1,7 @@
+This is a README for implementing Arff Files into WEKA. 
+WEKA is a way to show DATA through graphs. For more information on WEKA - The University of WAIKTO, you can go to https://www.cs.waikato.ac.nz/ml/index.html
+
+To implement the Arff files that I have zipped, you can go to explorer and then click "open file"
+After you click "open file" you will want to find your file on your computer and then add it to the software. You can then visualize these data points by clicking on "Cluster" and run it through different graphing algorithms. Some of the graphing algorithms that are useful would be: Kmeans, EP, AND Canopy.
+This software only visualizes data points when they are in an Arff file. You can covert a CSV file to an Arff file in the software as well. 
+
