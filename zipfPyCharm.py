@@ -236,105 +236,82 @@ def get_links(author, number_of_images, list):
             list.append(link)
 
 
-def get_all_links(list):
-    corale1 = os.listdir("images/filigrees/Corale 1/")
-    corale3 = os.listdir("images/filigrees/Corale 3/")
-    corale5 = os.listdir("images/filigrees/Corale 5/")
-    corale6 = os.listdir("images/filigrees/Corale 6/")
-    corale7 = os.listdir("images/filigrees/Corale 7/")
-    corale8 = os.listdir("images/filigrees/Corale 8/")
-    corale9 = os.listdir("images/filigrees/Corale 9/")
-    corale11 = os.listdir("images/filigrees/Corale 11/")
-    corale12 = os.listdir("images/filigrees/Corale 12/")
-    corale13 = os.listdir("images/filigrees/Corale 13/")
-    corale14 = os.listdir("images/filigrees/Corale 14/")
-    corale15 = os.listdir("images/filigrees/Corale 15/")
-    corale16 = os.listdir("images/filigrees/Corale 16/")
-    corale17 = os.listdir("images/filigrees/Corale 17/")
-    corale18 = os.listdir("images/filigrees/Corale 18/")
-    corale19 = os.listdir("images/filigrees/Corale 19/")
-
-    corale1.remove(".DS_Store")
-    corale3.remove(".DS_Store")
-    corale5.remove(".DS_Store")
-    corale6.remove(".DS_Store")
-    corale7.remove(".DS_Store")
-    corale8.remove(".DS_Store")
-    corale9.remove(".DS_Store")
-    corale11.remove(".DS_Store")
-    corale12.remove(".DS_Store")
-    corale13.remove(".DS_Store")
-    corale14.remove(".DS_Store")
-    corale15.remove(".DS_Store")
-    corale16.remove(".DS_Store")
-    corale17.remove(".DS_Store")
-    corale18.remove(".DS_Store")
-    corale19.remove(".DS_Store")
-
-    for image in corale1:
+def get_filigree_by_book(book_number, list):
+    corale = ""
+    slug = ""
+    if book_number == 1:
         slug = "images/filigrees/Corale 1/"
-        url = slug + image
-        list.append(url)
-    for image in corale3:
+        corale = os.listdir(slug)
+    elif book_number == 3:
         slug = "images/filigrees/Corale 3/"
-        url = slug + image
-        list.append(url)
-    for image in corale5:
+        corale = os.listdir(slug)
+    elif book_number == 5:
         slug = "images/filigrees/Corale 5/"
-        url = slug + image
-        list.append(url)
-    for image in corale6:
+        corale = os.listdir(slug)
+    elif book_number == 6:
         slug = "images/filigrees/Corale 6/"
-        url = slug + image
-        list.append(url)
-    for image in corale7:
+        corale = os.listdir(slug)
+    elif book_number == 7:
         slug = "images/filigrees/Corale 7/"
-        url = slug + image
-        list.append(url)
-    for image in corale8:
+        corale = os.listdir(slug)
+    elif book_number == 8:
         slug = "images/filigrees/Corale 8/"
-        url = slug + image
-        list.append(url)
-    for image in corale9:
+        corale = os.listdir(slug)
+    elif book_number == 9:
         slug = "images/filigrees/Corale 9/"
-        url = slug + image
-        list.append(url)
-    for image in corale11:
+        corale = os.listdir(slug)
+    elif book_number == 11:
         slug = "images/filigrees/Corale 11/"
-        url = slug + image
-        list.append(url)
-    for image in corale12:
+        corale = os.listdir(slug)
+    elif book_number == 12:
         slug = "images/filigrees/Corale 12/"
-        url = slug + image
-        list.append(url)
-    for image in corale13:
+        corale = os.listdir(slug)
+    elif book_number == 13:
         slug = "images/filigrees/Corale 13/"
-        url = slug + image
-        list.append(url)
-    for image in corale14:
+        corale = os.listdir(slug)
+    elif book_number == 14:
         slug = "images/filigrees/Corale 14/"
-        url = slug + image
-        list.append(url)
-    for image in corale15:
+        corale = os.listdir(slug)
+    elif book_number == 15:
         slug = "images/filigrees/Corale 15/"
-        url = slug + image
-        list.append(url)
-    for image in corale16:
+        corale = os.listdir(slug)
+    elif book_number == 16:
         slug = "images/filigrees/Corale 16/"
-        url = slug + image
-        list.append(url)
-    for image in corale17:
+        corale = os.listdir(slug)
+    elif book_number == 17:
         slug = "images/filigrees/Corale 17/"
-        url = slug + image
-        list.append(url)
-    for image in corale18:
+        corale = os.listdir(slug)
+    elif book_number == 18:
         slug = "images/filigrees/Corale 18/"
-        url = slug + image
-        list.append(url)
-    for image in corale19:
+        corale = os.listdir(slug)
+    elif book_number == 19:
         slug = "images/filigrees/Corale 19/"
+        corale = os.listdir(slug)
+
+    corale.remove(".DS_Store")
+
+    for image in corale:
         url = slug + image
         list.append(url)
+
+
+def get_all_links(list):
+    get_filigree_by_book(1, list)
+    get_filigree_by_book(3, list)
+    get_filigree_by_book(5, list)
+    get_filigree_by_book(6, list)
+    get_filigree_by_book(7, list)
+    get_filigree_by_book(8, list)
+    get_filigree_by_book(9, list)
+    get_filigree_by_book(11, list)
+    get_filigree_by_book(12, list)
+    get_filigree_by_book(13, list)
+    get_filigree_by_book(14, list)
+    get_filigree_by_book(15, list)
+    get_filigree_by_book(16, list)
+    get_filigree_by_book(17, list)
+    get_filigree_by_book(18, list)
+    get_filigree_by_book(19, list)
 
 
 def same_author():
@@ -649,10 +626,60 @@ def all_images_quick(image_type):
     file.close()
 
 
+def case_tests(test_code, image_type):
+    links = []
+    rows = []
+    file_name = "case_" + test_code + "_" + image_type + ".csv"
+
+    if test_code == 'a':
+        get_filigree_by_book(16, links)
+    elif test_code == 'b':
+        get_filigree_by_book(11, links)
+    elif test_code == 'c':
+        get_filigree_by_book(19, links)
+    elif test_code == 'd':
+        get_filigree_by_book(8, links)
+    elif test_code == 'e':
+        get_filigree_by_book(5, links)
+    elif test_code == 'f':
+        get_filigree_by_book(1, links)
+    elif test_code == 'g':
+        get_filigree_by_book(15, links)
+
+    for link in links:
+        results = [link]
+
+        if image_type == "edge":
+            image = get_image(link)
+            recursive(image, results, 1)
+        elif image_type == "color":
+            image = get_image_color(link)
+            recursive(image, results, 1)
+        else:
+            print("Image type not supported! Please use 'edge' for edge-detection and 'color' for color")
+            break
+
+        row = []
+
+        for result in results:
+            if isinstance(result, str):
+                row.append(result)
+            else:
+                row.append(result[0])
+                row.append(result[1])
+
+        rows.append(row)
+
+    with open(file_name, "w") as file:
+        writer = csv.writer(file)
+        writer.writerow(["Image", "Slope Q1", "R2 Q1", "Slope Q2", "R2 Q2", "Slope Q3", "R2 Q3", "Slope Q4", "R2 Q4",
+                         "Slope Whole", "R2 Whole"])
+        writer.writerows(rows)
+
+
 def main():
-    get_vectors("edge")
-    get_vectors("gray")
-    get_vectors("color")
+    case_tests('e', "edge")
+    case_tests('e', "color")
 
 
 main()
