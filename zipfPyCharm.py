@@ -656,8 +656,7 @@ def case_tests(test_code, image_type):
             image = get_image_color(link)
             recursive(image, results, 1)
         else:
-            print("Image type not supported! Please use 'edge' for edge-detection, 'gray' for grayscale, and 'color' "
-                  "for color")
+            print("Image type not supported! Please use 'edge' for edge-detection and 'color' for color")
             break
 
         row = []
@@ -679,20 +678,8 @@ def case_tests(test_code, image_type):
 
 
 def main():
-    case_tests('a', "edge")
-    case_tests('a', "color")
-    case_tests('b', "edge")
-    case_tests('b', "color")
-    case_tests('c', "edge")
-    case_tests('c', "color")
-    case_tests('d', "edge")
-    case_tests('d', "color")
     case_tests('e', "edge")
     case_tests('e', "color")
-    case_tests('f', "edge")
-    case_tests('f', "color")
-    case_tests('g', "edge")
-    case_tests('g', "color")
 
 
 main()
