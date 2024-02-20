@@ -677,9 +677,53 @@ def case_tests(test_code, image_type):
         writer.writerows(rows)
 
 
+def all_cases(image_type):
+    links = []
+    rows = []
+    file_name = "all_cases_" + image_type + ".csv"
+
+    get_filigree_by_book(16, links)
+    get_filigree_by_book(11, links)
+    get_filigree_by_book(19, links)
+    get_filigree_by_book(8, links)
+    get_filigree_by_book(5, links)
+    get_filigree_by_book(1, links)
+    get_filigree_by_book(15, links)
+
+    for link in links:
+        results = [link]
+
+        if image_type == "edge":
+            image = get_image(link)
+            recursive(image, results, 1)
+        elif image_type == "color":
+            image = get_image_color(link)
+            recursive(image, results, 1)
+        else:
+            print("Image type not supported! Please use 'edge' for edge-detection and 'color' for color")
+            break
+
+        row = []
+
+        for result in results:
+            if isinstance(result, str):
+                row.append(result)
+            else:
+                row.append(result[0])
+                row.append(result[1])
+
+        rows.append(row)
+
+    with open(file_name, "w") as file:
+        writer = csv.writer(file)
+        writer.writerow(["Image", "Slope Q1", "R2 Q1", "Slope Q2", "R2 Q2", "Slope Q3", "R2 Q3", "Slope Q4", "R2 Q4",
+                         "Slope Whole", "R2 Whole"])
+        writer.writerows(rows)
+
+
 def main():
-    case_tests('e', "edge")
-    case_tests('e', "color")
+    all_cases("edge")
+    all_cases("color")
 
 
 main()
