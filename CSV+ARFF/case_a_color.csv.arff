@@ -1,0 +1,40 @@
+@relation case_a_color
+
+@attribute Image {'images/filigrees/Corale 16/C16-6v-7r-cropped.jpg','images/filigrees/Corale 16/C16-2v-3r-croppedC.jpg','images/filigrees/Corale 16/C16-1r-croppedR.jpg','images/filigrees/Corale 16/C16-102v-I w illumination-2-cropped.jpg','images/filigrees/Corale 16/C16-31v-32r-cropped.jpg','images/filigrees/Corale 16/C16-6v-7r-croppedU.jpg','images/filigrees/Corale 16/C16-3v-4r-cropped.jpg','images/filigrees/Corale 16/C16-31r-cropped.jpg','images/filigrees/Corale 16/C16-23v-24r-cropped.jpg','images/filigrees/Corale 16/C16-31v-32r-croppedA.jpg','images/filigrees/Corale 16/C16-24v-25r-croppedN.jpg','images/filigrees/Corale 16/C16-35v-36r-croppedh.jpg','images/filigrees/Corale 16/C16-1r-cropped.jpg','images/filigrees/Corale 16/C16-35r-cropped.jpg','images/filigrees/Corale 16/C16-35v-36r-croppedL.jpg','images/filigrees/Corale 16/C16-24v-25r-croppedE.jpg','images/filigrees/Corale 16/C16-38v-gold ck-cropped.jpg','images/filigrees/Corale 16/C16-102v-103r-cropped.jpg','images/filigrees/Corale 16/C16-40v-41r-cropped.jpg','images/filigrees/Corale 16/C16-41v-42r-croppedU2.jpg','images/filigrees/Corale 16/C16-46v-cropped.jpg','images/filigrees/Corale 16/C16-22v-Drawing-2-cropped.jpg','images/filigrees/Corale 16/C16-2v-3r-croppedN.jpg','images/filigrees/Corale 16/C16-74v-75r-St John liturgy-cropped.jpg','images/filigrees/Corale 16/C16-41v-42r-croppedU.jpg'}
+@attribute 'Slope Q1' numeric
+@attribute 'R2 Q1' numeric
+@attribute 'Slope Q2' numeric
+@attribute 'R2 Q2' numeric
+@attribute 'Slope Q3' numeric
+@attribute 'R2 Q3' numeric
+@attribute 'Slope Q4' numeric
+@attribute 'R2 Q4' numeric
+@attribute 'Slope Whole' numeric
+@attribute 'R2 Whole' numeric
+
+@data
+'images/filigrees/Corale 16/C16-6v-7r-cropped.jpg',-0.410595,0.753331,-0.330995,0.758683,-0.335142,0.728485,-0.382225,0.76525,-0.498236,0.886265
+'images/filigrees/Corale 16/C16-2v-3r-croppedC.jpg',-0.475668,0.895564,-0.428342,0.874455,-0.441914,0.864422,-0.471879,0.887951,-0.649684,0.924506
+'images/filigrees/Corale 16/C16-1r-croppedR.jpg',-0.516589,0.910367,-0.517279,0.910549,-0.527239,0.912956,-0.503741,0.904466,-0.691207,0.918888
+'images/filigrees/Corale 16/C16-102v-I w illumination-2-cropped.jpg',-0.823943,0.959852,-0.718626,0.929176,-0.917371,0.958204,-0.795197,0.945827,-0.986937,0.924901
+'images/filigrees/Corale 16/C16-31v-32r-cropped.jpg',-0.369106,0.784862,-0.338309,0.783857,-0.36253,0.792685,-0.347795,0.793899,-0.513933,0.909072
+'images/filigrees/Corale 16/C16-6v-7r-croppedU.jpg',-0.495298,0.876387,-0.460498,0.866482,-0.485879,0.874523,-0.434189,0.837954,-0.653688,0.932139
+'images/filigrees/Corale 16/C16-3v-4r-cropped.jpg',-0.422143,0.814562,-0.40267,0.829699,-0.412318,0.812767,-0.442897,0.820115,-0.577224,0.92064
+'images/filigrees/Corale 16/C16-31r-cropped.jpg',-0.554439,0.908278,-0.535849,0.902677,-0.566831,0.917141,-0.60328,0.919998,-0.756724,0.950023
+'images/filigrees/Corale 16/C16-23v-24r-cropped.jpg',-0.583725,0.919269,-0.582746,0.921065,-0.600967,0.928217,-0.564649,0.911249,-0.795406,0.930064
+'images/filigrees/Corale 16/C16-31v-32r-croppedA.jpg',-0.35436,0.749099,-0.394503,0.785806,-0.316944,0.721877,-0.375664,0.747346,-0.511961,0.893596
+'images/filigrees/Corale 16/C16-24v-25r-croppedN.jpg',-0.396964,0.798367,-0.405342,0.811523,-0.433969,0.830242,-0.396415,0.839349,-0.602672,0.928672
+'images/filigrees/Corale 16/C16-35v-36r-croppedh.jpg',-0.410674,0.843181,-0.411552,0.865379,-0.421496,0.84809,-0.355742,0.834023,-0.576507,0.92196
+'images/filigrees/Corale 16/C16-1r-cropped.jpg',-0.485553,0.881374,-0.496201,0.886157,-0.461135,0.859584,-0.450605,0.870492,-0.660339,0.94004
+'images/filigrees/Corale 16/C16-35r-cropped.jpg',-0.519534,0.907877,-0.584164,0.921831,-0.529103,0.911021,-0.564818,0.919154,-0.760227,0.93627
+'images/filigrees/Corale 16/C16-35v-36r-croppedL.jpg',-0.45544,0.865696,-0.326814,0.813077,-0.474697,0.851094,-0.412806,0.844788,-0.60962,0.928991
+'images/filigrees/Corale 16/C16-24v-25r-croppedE.jpg',-0.400929,0.852547,-0.444757,0.874616,-0.392594,0.850868,-0.391317,0.852779,-0.576865,0.915565
+'images/filigrees/Corale 16/C16-38v-gold ck-cropped.jpg',-0.655919,0.936492,-0.597221,0.928242,-0.642551,0.93455,-0.608748,0.930264,-0.839095,0.949525
+'images/filigrees/Corale 16/C16-102v-103r-cropped.jpg',-0.696929,0.945872,-0.758096,0.954513,-0.64848,0.936279,-0.767619,0.954413,-0.907276,0.958041
+'images/filigrees/Corale 16/C16-40v-41r-cropped.jpg',-0.565893,0.924236,-0.564137,0.920383,-0.589545,0.927051,-0.532286,0.913209,-0.788337,0.938886
+'images/filigrees/Corale 16/C16-41v-42r-croppedU2.jpg',-0.347311,0.724794,-0.355637,0.767443,-0.363704,0.796479,-0.353732,0.753328,-0.508408,0.896205
+'images/filigrees/Corale 16/C16-46v-cropped.jpg',-0.524417,0.910133,-0.507645,0.907066,-0.553041,0.920269,-0.484873,0.897643,-0.767382,0.925419
+'images/filigrees/Corale 16/C16-22v-Drawing-2-cropped.jpg',-0.824986,0.955266,-0.906773,0.953202,-0.869487,0.952998,-0.863594,0.946188,-1.132541,0.930813
+'images/filigrees/Corale 16/C16-2v-3r-croppedN.jpg',-0.41741,0.848153,-0.465963,0.863421,-0.447756,0.857634,-0.432097,0.851651,-0.624095,0.936311
+'images/filigrees/Corale 16/C16-74v-75r-St John liturgy-cropped.jpg',-0.456781,0.877593,-0.500079,0.885398,-0.467044,0.884119,-0.466282,0.889721,-0.68442,0.941549
+'images/filigrees/Corale 16/C16-41v-42r-croppedU.jpg',-0.449819,0.8452,-0.454592,0.855206,-0.46376,0.867338,-0.45462,0.858338,-0.626305,0.928499

@@ -1,0 +1,60 @@
+@relation case_f_color
+
+@attribute Image {'images/filigrees/Corale 1/C1-140v-G2-cropped.jpg','images/filigrees/Corale 1/C1-101v-AQ filigree-2-cropped.jpg','images/filigrees/Corale 1/C1-103v-A sapphires-cropped.jpg','images/filigrees/Corale 1/C1-19v-20r-Magdalene-cropped.jpg','images/filigrees/Corale 1/C1-22v-E w filigree 2-cropped.jpg','images/filigrees/Corale 1/C1-50v-P w cross-2-cropped.jpg','images/filigrees/Corale 1/C1-170v-G-cropped.jpg','images/filigrees/Corale 1/C1-143v-144r-O, A grisaille-croppedO.jpg','images/filigrees/Corale 1/C1-25v-Q-2-cropped.jpg','images/filigrees/Corale 1/C1-20v-21r-Magdanele hymn 2-cropped.jpg','images/filigrees/Corale 1/C1-47r-H-3-cropped.jpg','images/filigrees/Corale 1/C1-16r-S w mandorla-croppedS.jpg','images/filigrees/Corale 1/C1-84v-Letter P-1-cropped.jpg','images/filigrees/Corale 1/C1-24v-Letter I-1-croppedS.jpg','images/filigrees/Corale 1/C1-24v-Letter I-1-croppedR.jpg','images/filigrees/Corale 1/C1-31v-32r-cropped.jpg','images/filigrees/Corale 1/C1-29v-30r-cropped.jpg','images/filigrees/Corale 1/C1-28r-O-cropped.jpg','images/filigrees/Corale 1/C1-30v-31r-croppedO.jpg','images/filigrees/Corale 1/C1-23v-S-cropped.jpg','images/filigrees/Corale 1/C1-160v-B2-cropped.jpg','images/filigrees/Corale 1/C1-16r-S w mandorla-croppedA.jpg','images/filigrees/Corale 1/C1-21v-Mary Magdalene hymn 3-cropped.jpg','images/filigrees/Corale 1/C1-27v-S-2-cropped.jpg','images/filigrees/Corale 1/C1-173-A2-cropped.jpg','images/filigrees/Corale 1/C1-142v-T2-cropped.jpg','images/filigrees/Corale 1/C1-20v-21r-Magdanele hymn 2-croppedE.jpg','images/filigrees/Corale 1/C1-46r-Q-cropped.jpg','images/filigrees/Corale 1/C1-51r-M church-cropped.jpg','images/filigrees/Corale 1/C1-110v-N-3-cropped.jpg','images/filigrees/Corale 1/C1-31v-32r-croppedC.jpg','images/filigrees/Corale 1/C1-75r-O-cropped.jpg','images/filigrees/Corale 1/C1-130v-8h-cropped.jpg','images/filigrees/Corale 1/C1-28r-O completion-cropped.jpg','images/filigrees/Corale 1/C1-28v-29r-croppedh.jpg','images/filigrees/Corale 1/C1-88r-O Sapphires 6-cropped.jpg','images/filigrees/Corale 1/C1-99r-2-cropped.jpg','images/filigrees/Corale 1/C1-143v-144r-O, A grisaille-croppedA.jpg','images/filigrees/Corale 1/C1-2r-Opening V-cropped.jpg','images/filigrees/Corale 1/C1-28v-29r-croppedM.jpg','images/filigrees/Corale 1/C1-89r-E hatching-cropped.jpg','images/filigrees/Corale 1/C1-76v-E-cropped.jpg','images/filigrees/Corale 1/C1-45r-E hatching 2-cropped.jpg','images/filigrees/Corale 1/C1-170v-172r-G-cropped.jpg','images/filigrees/Corale 1/C1-2v _ 4r-cropped.jpg'}
+@attribute 'Slope Q1' numeric
+@attribute 'R2 Q1' numeric
+@attribute 'Slope Q2' numeric
+@attribute 'R2 Q2' numeric
+@attribute 'Slope Q3' numeric
+@attribute 'R2 Q3' numeric
+@attribute 'Slope Q4' numeric
+@attribute 'R2 Q4' numeric
+@attribute 'Slope Whole' numeric
+@attribute 'R2 Whole' numeric
+
+@data
+'images/filigrees/Corale 1/C1-140v-G2-cropped.jpg',-0.867071,0.960203,-0.823201,0.932292,-0.844284,0.944087,-0.845736,0.955024,-1.092865,0.917967
+'images/filigrees/Corale 1/C1-101v-AQ filigree-2-cropped.jpg',-0.767763,0.95727,-0.716016,0.949558,-0.759297,0.958173,-0.69133,0.94315,-0.942863,0.92483
+'images/filigrees/Corale 1/C1-103v-A sapphires-cropped.jpg',-0.865149,0.949758,-0.781137,0.931354,-0.847317,0.94019,-0.881768,0.938621,-1.066472,0.899804
+'images/filigrees/Corale 1/C1-19v-20r-Magdalene-cropped.jpg',-0.415,0.845646,-0.404189,0.85463,-0.422325,0.864466,-0.37623,0.841043,-0.607354,0.925925
+'images/filigrees/Corale 1/C1-22v-E w filigree 2-cropped.jpg',-0.958028,0.968508,-0.936621,0.950772,-0.954419,0.952585,-0.953736,0.939005,-1.184039,0.919806
+'images/filigrees/Corale 1/C1-50v-P w cross-2-cropped.jpg',-1.0464,0.976051,-1.02622,0.930687,-1.087982,0.977051,-1.044571,0.949875,-1.272093,0.926367
+'images/filigrees/Corale 1/C1-170v-G-cropped.jpg',-0.564559,0.924649,-0.577285,0.926459,-0.593348,0.930042,-0.611036,0.933931,-0.812211,0.923554
+'images/filigrees/Corale 1/C1-143v-144r-O, A grisaille-croppedO.jpg',-0.381145,0.829472,-0.364022,0.814494,-0.343333,0.816575,-0.339188,0.804219,-0.525536,0.911691
+'images/filigrees/Corale 1/C1-25v-Q-2-cropped.jpg',-0.961168,0.950866,-0.940009,0.946779,-0.97823,0.964148,-0.949151,0.95805,-1.213879,0.913629
+'images/filigrees/Corale 1/C1-20v-21r-Magdanele hymn 2-cropped.jpg',-0.567588,0.918799,-0.489702,0.900126,-0.529982,0.910635,-0.527138,0.910905,-0.74379,0.931106
+'images/filigrees/Corale 1/C1-47r-H-3-cropped.jpg',-0.824277,0.959346,-0.923142,0.968101,-0.789236,0.954446,-0.834881,0.954195,-1.058592,0.96057
+'images/filigrees/Corale 1/C1-16r-S w mandorla-croppedS.jpg',-0.517725,0.910859,-0.466184,0.88975,-0.541782,0.912139,-0.527655,0.91383,-0.704664,0.919631
+'images/filigrees/Corale 1/C1-84v-Letter P-1-cropped.jpg',-0.750235,0.935676,-0.656175,0.944037,-0.790834,0.945812,-0.730216,0.949033,-0.922213,0.960726
+'images/filigrees/Corale 1/C1-24v-Letter I-1-croppedS.jpg',-0.58028,0.910937,-0.521087,0.902604,-0.526185,0.906795,-0.541314,0.89179,-0.76595,0.946538
+'images/filigrees/Corale 1/C1-24v-Letter I-1-croppedR.jpg',-0.533134,0.892593,-0.500621,0.896872,-0.491108,0.876145,-0.465995,0.88628,-0.683473,0.942354
+'images/filigrees/Corale 1/C1-31v-32r-cropped.jpg',-0.430607,0.870874,-0.380276,0.844929,-0.407922,0.86213,-0.372933,0.842222,-0.603836,0.902241
+'images/filigrees/Corale 1/C1-29v-30r-cropped.jpg',-0.436714,0.871,-0.423395,0.869862,-0.380871,0.84766,-0.371369,0.844991,-0.612043,0.920464
+'images/filigrees/Corale 1/C1-28r-O-cropped.jpg',-0.657257,0.936107,-0.670528,0.942963,-0.644361,0.930296,-0.652409,0.937271,-0.844601,0.95258
+'images/filigrees/Corale 1/C1-30v-31r-croppedO.jpg',-0.487512,0.871035,-0.460583,0.866796,-0.483938,0.877737,-0.430767,0.86229,-0.664928,0.943476
+'images/filigrees/Corale 1/C1-23v-S-cropped.jpg',-0.855103,0.946878,-0.908251,0.933457,-0.8323,0.938496,-0.923997,0.947621,-1.096401,0.901079
+'images/filigrees/Corale 1/C1-160v-B2-cropped.jpg',-0.750459,0.951783,-0.793743,0.956798,-0.732675,0.950244,-0.764168,0.951634,-0.990769,0.952824
+'images/filigrees/Corale 1/C1-16r-S w mandorla-croppedA.jpg',-0.566474,0.922455,-0.498531,0.902312,-0.496062,0.904918,-0.569573,0.923802,-0.714765,0.92845
+'images/filigrees/Corale 1/C1-21v-Mary Magdalene hymn 3-cropped.jpg',-0.550521,0.917353,-0.500535,0.896589,-0.506561,0.903785,-0.481396,0.898353,-0.745183,0.91792
+'images/filigrees/Corale 1/C1-27v-S-2-cropped.jpg',-0.882089,0.951552,-0.896746,0.938947,-0.909412,0.924857,-0.848485,0.948159,-1.147623,0.902931
+'images/filigrees/Corale 1/C1-173-A2-cropped.jpg',-0.924025,0.966926,-0.873157,0.963251,-0.888285,0.961209,-0.86934,0.962922,-1.135699,0.950137
+'images/filigrees/Corale 1/C1-142v-T2-cropped.jpg',-0.990003,0.961952,-1.000445,0.952322,-0.996736,0.957495,-0.997467,0.949316,-1.242693,0.926808
+'images/filigrees/Corale 1/C1-20v-21r-Magdanele hymn 2-croppedE.jpg',-0.528077,0.859124,-0.476684,0.87671,-0.440084,0.822014,-0.389188,0.828403,-0.644236,0.935464
+'images/filigrees/Corale 1/C1-46r-Q-cropped.jpg',-0.996131,0.966231,-1.021978,0.962898,-1.003895,0.961176,-0.962307,0.960088,-1.231382,0.943406
+'images/filigrees/Corale 1/C1-51r-M church-cropped.jpg',-0.899,0.9516,-0.920391,0.952434,-0.919919,0.951814,-0.926905,0.961021,-1.113089,0.925996
+'images/filigrees/Corale 1/C1-110v-N-3-cropped.jpg',-1.000164,0.962584,-1.002532,0.960477,-1.006862,0.962267,-1.070922,0.945832,-1.245463,0.919952
+'images/filigrees/Corale 1/C1-31v-32r-croppedC.jpg',-0.398602,0.856246,-0.362852,0.833196,-0.402915,0.85551,-0.352176,0.82549,-0.563341,0.906012
+'images/filigrees/Corale 1/C1-75r-O-cropped.jpg',-0.935938,0.968009,-0.927599,0.96499,-0.909212,0.96506,-0.870489,0.958711,-1.133987,0.955948
+'images/filigrees/Corale 1/C1-130v-8h-cropped.jpg',-0.977784,0.961139,-0.94857,0.962047,-0.992912,0.962605,-0.960676,0.960155,-1.204455,0.952147
+'images/filigrees/Corale 1/C1-28r-O completion-cropped.jpg',-1.010025,0.934917,-1.038972,0.937646,-0.992923,0.93929,-1.059117,0.930332,-1.262124,0.883316
+'images/filigrees/Corale 1/C1-28v-29r-croppedh.jpg',-0.473479,0.887874,-0.547284,0.880977,-0.421273,0.864907,-0.421309,0.872224,-0.684078,0.938727
+'images/filigrees/Corale 1/C1-88r-O Sapphires 6-cropped.jpg',-1.031405,0.936181,-0.940615,0.929217,-1.034068,0.931252,-0.955795,0.901311,-1.168072,0.888783
+'images/filigrees/Corale 1/C1-99r-2-cropped.jpg',-0.758091,0.951268,-0.753157,0.950607,-0.773125,0.958577,-0.804469,0.946013,-0.915683,0.930305
+'images/filigrees/Corale 1/C1-143v-144r-O, A grisaille-croppedA.jpg',-0.504682,0.891815,-0.438991,0.868085,-0.444976,0.881814,-0.443742,0.866075,-0.599885,0.92716
+'images/filigrees/Corale 1/C1-2r-Opening V-cropped.jpg',-0.53445,0.913743,-0.481265,0.892617,-0.491528,0.899921,-0.478117,0.89257,-0.704422,0.926916
+'images/filigrees/Corale 1/C1-28v-29r-croppedM.jpg',-0.513424,0.90028,-0.471036,0.886582,-0.473963,0.89126,-0.463842,0.882973,-0.69954,0.935848
+'images/filigrees/Corale 1/C1-89r-E hatching-cropped.jpg',-0.892776,0.961965,-0.871159,0.949125,-0.829683,0.961534,-0.888718,0.940107,-1.121007,0.944136
+'images/filigrees/Corale 1/C1-76v-E-cropped.jpg',-1.002889,0.971207,-0.922537,0.961004,-1.001282,0.969002,-0.895092,0.954606,-1.175307,0.943738
+'images/filigrees/Corale 1/C1-45r-E hatching 2-cropped.jpg',-1.102679,0.960552,-1.108309,0.944896,-1.116721,0.951276,-1.110777,0.94056,-1.36545,0.919808
+'images/filigrees/Corale 1/C1-170v-172r-G-cropped.jpg',-0.488214,0.888354,-0.388167,0.850002,-0.51562,0.891476,-0.417171,0.865784,-0.611753,0.928179
+'images/filigrees/Corale 1/C1-2v _ 4r-cropped.jpg',-0.483077,0.865251,-0.482219,0.887707,-0.453346,0.867034,-0.503439,0.895306,-0.67489,0.940542

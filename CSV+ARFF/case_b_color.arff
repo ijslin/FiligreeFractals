@@ -1,0 +1,44 @@
+@relation case_b_color
+
+@attribute Image {'images/filigrees/Corale 11/C11-145r-cropped.jpg','images/filigrees/Corale 11/C11-109v-Heart I-3-croppedS.jpg','images/filigrees/Corale 11/C11-22v-H-2-cropped.jpg','images/filigrees/Corale 11/C11-109v-Heart I-3-croppedE.jpg','images/filigrees/Corale 11/C11-28v-greens-2-cropped.jpg','images/filigrees/Corale 11/C11-30v-31r-flowers C-cropped.jpg','images/filigrees/Corale 11/C11-89r-croppedE.jpg','images/filigrees/Corale 11/C11-14r-I-cropped.jpg','images/filigrees/Corale 11/C11-28v_greens-croppedC.jpg','images/filigrees/Corale 11/C11-109v-Heart I-3-croppedS2.jpg','images/filigrees/Corale 11/C11-163v-O filigree-cropped.jpg','images/filigrees/Corale 11/C11-123v-cropped.jpg','images/filigrees/Corale 11/C11-54v-Modified O-Mod-cropped.jpg','images/filigrees/Corale 11/C11-150v-cropped.jpg','images/filigrees/Corale 11/C11-28v-4-cropped.jpg','images/filigrees/Corale 11/C11-29v-cropped.jpg','images/filigrees/Corale 11/C11-54v-Repaired O-Mod-cropped.jpg','images/filigrees/Corale 11/C11-78v-O sphere-3-cropped.jpg','images/filigrees/Corale 11/C11-151v-cropped.jpg','images/filigrees/Corale 11/C11-33r-E-cropped.jpg','images/filigrees/Corale 11/C11-31v-C flowers-3-cropped.jpg','images/filigrees/Corale 11/C11-28v_greens-croppedM.jpg','images/filigrees/Corale 11/C11-22v-I-2-cropped.jpg','images/filigrees/Corale 11/C11-54v-Repaired O-Mod-croppedC.jpg','images/filigrees/Corale 11/C11-140r-cropped.jpg','images/filigrees/Corale 11/C11-89r-croppedO.jpg','images/filigrees/Corale 11/C11-30v-flowers C-cropped.jpg','images/filigrees/Corale 11/C11-152r-cropped.jpg','images/filigrees/Corale 11/C11-112r-O w flowers-cropped.jpg'}
+@attribute 'Slope Q1' numeric
+@attribute 'R2 Q1' numeric
+@attribute 'Slope Q2' numeric
+@attribute 'R2 Q2' numeric
+@attribute 'Slope Q3' numeric
+@attribute 'R2 Q3' numeric
+@attribute 'Slope Q4' numeric
+@attribute 'R2 Q4' numeric
+@attribute 'Slope Whole' numeric
+@attribute 'R2 Whole' numeric
+
+@data
+'images/filigrees/Corale 11/C11-145r-cropped.jpg',-0.678301,0.935404,-0.66444,0.92608,-0.601842,0.921071,-0.662394,0.923446,-0.804186,0.931608
+'images/filigrees/Corale 11/C11-109v-Heart I-3-croppedS.jpg',-0.338534,0.816418,-0.347171,0.824178,-0.378967,0.843917,-0.326135,0.798437,-0.500012,0.901275
+'images/filigrees/Corale 11/C11-22v-H-2-cropped.jpg',-0.679889,0.933175,-0.693578,0.937693,-0.715328,0.944543,-0.670046,0.937295,-0.902641,0.96207
+'images/filigrees/Corale 11/C11-109v-Heart I-3-croppedE.jpg',-0.425409,0.828443,-0.384875,0.839853,-0.471377,0.827415,-0.405983,0.837735,-0.605657,0.929321
+'images/filigrees/Corale 11/C11-28v-greens-2-cropped.jpg',-1.09437,0.962689,-1.073976,0.954578,-1.051934,0.966285,-1.058334,0.955622,-1.320992,0.937215
+'images/filigrees/Corale 11/C11-30v-31r-flowers C-cropped.jpg',-0.661703,0.935192,-0.672158,0.9289,-0.666245,0.93625,-0.677445,0.934557,-0.815632,0.94825
+'images/filigrees/Corale 11/C11-89r-croppedE.jpg',-0.540032,0.913112,-0.505766,0.902815,-0.510879,0.907853,-0.556966,0.917186,-0.737562,0.920357
+'images/filigrees/Corale 11/C11-14r-I-cropped.jpg',-0.642821,0.93511,-0.624814,0.936638,-0.745431,0.940769,-0.704619,0.936549,-0.884562,0.928404
+'images/filigrees/Corale 11/C11-28v_greens-croppedC.jpg',-0.537479,0.881147,-0.53027,0.887788,-0.549543,0.887146,-0.492802,0.888037,-0.715831,0.949929
+'images/filigrees/Corale 11/C11-109v-Heart I-3-croppedS2.jpg',-0.393015,0.852009,-0.333403,0.811911,-0.366647,0.842037,-0.361601,0.833067,-0.557692,0.909516
+'images/filigrees/Corale 11/C11-163v-O filigree-cropped.jpg',-0.88681,0.947872,-0.90827,0.930964,-0.900717,0.941363,-0.908426,0.921613,-1.111119,0.872374
+'images/filigrees/Corale 11/C11-123v-cropped.jpg',-0.554713,0.915947,-0.506194,0.905275,-0.551945,0.911367,-0.515835,0.906863,-0.687744,0.934893
+'images/filigrees/Corale 11/C11-54v-Modified O-Mod-cropped.jpg',-0.645787,0.938473,-0.660685,0.93677,-0.641573,0.936852,-0.63816,0.931294,-0.885949,0.949054
+'images/filigrees/Corale 11/C11-150v-cropped.jpg',-0.449871,0.879928,-0.429521,0.87559,-0.442914,0.877687,-0.448306,0.881134,-0.639933,0.917364
+'images/filigrees/Corale 11/C11-28v-4-cropped.jpg',-1.063778,0.942868,-1.031746,0.919434,-1.054608,0.937356,-1.028474,0.918185,-1.335112,0.901722
+'images/filigrees/Corale 11/C11-29v-cropped.jpg',-0.505001,0.905118,-0.520839,0.910121,-0.48237,0.898046,-0.490299,0.901913,-0.717246,0.914137
+'images/filigrees/Corale 11/C11-54v-Repaired O-Mod-cropped.jpg',-0.492172,0.890135,-0.358951,0.830958,-0.460604,0.884537,-0.407245,0.864792,-0.567045,0.906602
+'images/filigrees/Corale 11/C11-78v-O sphere-3-cropped.jpg',-0.985663,0.964616,-0.996146,0.959369,-1.025469,0.960293,-0.98214,0.953905,-1.236987,0.95042
+'images/filigrees/Corale 11/C11-151v-cropped.jpg',-0.514341,0.896624,-0.491969,0.895705,-0.586411,0.90933,-0.53295,0.911597,-0.668095,0.934345
+'images/filigrees/Corale 11/C11-33r-E-cropped.jpg',-0.823532,0.954138,-0.875339,0.955304,-0.83929,0.955222,-0.897592,0.950477,-1.076627,0.923949
+'images/filigrees/Corale 11/C11-31v-C flowers-3-cropped.jpg',-1.318127,0.950035,-1.256069,0.923231,-1.314639,0.931704,-1.284046,0.92573,-1.529809,0.917235
+'images/filigrees/Corale 11/C11-28v_greens-croppedM.jpg',-0.602339,0.878276,-0.631508,0.915297,-0.604639,0.90387,-0.56082,0.909535,-0.789732,0.95609
+'images/filigrees/Corale 11/C11-22v-I-2-cropped.jpg',-0.891679,0.962826,-0.829528,0.957257,-0.828705,0.959831,-0.818549,0.956389,-1.083948,0.952343
+'images/filigrees/Corale 11/C11-54v-Repaired O-Mod-croppedC.jpg',-0.482266,0.89139,-0.403872,0.86079,-0.487098,0.896579,-0.400785,0.857667,-0.670858,0.918825
+'images/filigrees/Corale 11/C11-140r-cropped.jpg',-0.958303,0.930196,-0.937515,0.921755,-0.99853,0.933501,-1.082475,0.939702,-1.233175,0.910475
+'images/filigrees/Corale 11/C11-89r-croppedO.jpg',-0.43254,0.855805,-0.459197,0.876966,-0.420498,0.83664,-0.500105,0.891767,-0.622364,0.932016
+'images/filigrees/Corale 11/C11-30v-flowers C-cropped.jpg',-0.843376,0.954849,-0.814118,0.938745,-0.824468,0.955316,-0.780953,0.948418,-1.08218,0.942481
+'images/filigrees/Corale 11/C11-152r-cropped.jpg',-0.499927,0.889564,-0.477224,0.889441,-0.526484,0.874398,-0.454995,0.884321,-0.677049,0.942048
+'images/filigrees/Corale 11/C11-112r-O w flowers-cropped.jpg',-0.847858,0.947852,-0.860842,0.946365,-0.888733,0.952084,-0.832051,0.954728,-1.052119,0.918881

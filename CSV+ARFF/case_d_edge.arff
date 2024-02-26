@@ -1,0 +1,36 @@
+@relation case_d_edge
+
+@attribute Image {'images/filigrees/Corale 8/Corale 8 - 0.49r.png','images/filigrees/Corale 8/Corale 8 - 0.45r.png','images/filigrees/Corale 8/Corale 8 - 0.52r.png','images/filigrees/Corale 8/Corale 8 - 0.53v.png','images/filigrees/Corale 8/Corale 8 - 0.44r.png','images/filigrees/Corale 8/Corale 8 - 46v.png','images/filigrees/Corale 8/Corale 8 - 0.49v.png','images/filigrees/Corale 8/Corale 8 - 0.32v.png','images/filigrees/Corale 8/Corale 8 - 0.58v.png','images/filigrees/Corale 8/Corale 8 - 0.58r.png','images/filigrees/Corale 8/Corale 8 - 0.35r.png','images/filigrees/Corale 8/C8-158v-Completion Q-cropped.jpg','images/filigrees/Corale 8/C8-155v-I-2-cropped.jpg','images/filigrees/Corale 8/Corale 8 - 0.36r.png','images/filigrees/Corale 8/Corale 8 - 0.37v.png','images/filigrees/Corale 8/Corale 8 - 0.37r.png','images/filigrees/Corale 8/Corale 8 - 0.40r.png','images/filigrees/Corale 8/Corale 8 - 0.51r.png','images/filigrees/Corale 8/Corale 8 - 0.46v.png','images/filigrees/Corale 8/Corale 8 - 0.46r.png','images/filigrees/Corale 8/C8-1r-Incipit-2-cropped.jpg'}
+@attribute 'Slope Q1' numeric
+@attribute 'R2 Q1' numeric
+@attribute 'Slope Q2' numeric
+@attribute 'R2 Q2' numeric
+@attribute 'Slope Q3' numeric
+@attribute 'R2 Q3' numeric
+@attribute 'Slope Q4' numeric
+@attribute 'R2 Q4' numeric
+@attribute 'Slope Whole' numeric
+@attribute 'R2 Whole' numeric
+
+@data
+'images/filigrees/Corale 8/Corale 8 - 0.49r.png',-2.346518,0.975035,-2.378443,0.971245,-2.317016,0.973851,-2.480951,0.961703,-2.323848,0.97111
+'images/filigrees/Corale 8/Corale 8 - 0.45r.png',-2.383004,0.946057,-2.551142,0.909359,-2.385407,0.928387,-2.518072,0.904155,-2.484294,0.92326
+'images/filigrees/Corale 8/Corale 8 - 0.52r.png',-1.912202,0.913934,-1.893621,0.884637,-1.924502,0.904964,-1.802169,0.891622,-1.919878,0.885079
+'images/filigrees/Corale 8/Corale 8 - 0.53v.png',-2.262865,0.923302,-2.206972,0.918719,-2.25169,0.916415,-2.13973,0.921276,-2.310691,0.899942
+'images/filigrees/Corale 8/Corale 8 - 0.44r.png',-1.853554,0.893109,-1.885742,0.877862,-1.859455,0.89709,-1.801789,0.86692,-1.904873,0.856229
+'images/filigrees/Corale 8/Corale 8 - 46v.png',-1.678727,0.872576,-1.703162,0.857563,-1.713984,0.861724,-1.61638,0.86632,-1.713605,0.829467
+'images/filigrees/Corale 8/Corale 8 - 0.49v.png',-2.295199,0.974116,-2.508971,0.957655,-2.442433,0.973981,-2.305525,0.963089,-2.231733,0.960505
+'images/filigrees/Corale 8/Corale 8 - 0.32v.png',-0.93387,0.849344,-0.834815,0.839409,-0.878226,0.854,-0.787745,0.83525,-0.847046,0.864383
+'images/filigrees/Corale 8/Corale 8 - 0.58v.png',-2.141534,0.914843,-2.044823,0.892285,-2.009668,0.926327,-1.971752,0.877292,-2.045229,0.903892
+'images/filigrees/Corale 8/Corale 8 - 0.58r.png',-2.083405,0.905247,-2.009739,0.915506,-1.977282,0.920725,-2.042586,0.903081,-2.042858,0.888272
+'images/filigrees/Corale 8/Corale 8 - 0.35r.png',-2.508132,0.909481,-2.529564,0.909169,-2.470798,0.896696,-2.567281,0.908189,-2.560902,0.908491
+'images/filigrees/Corale 8/C8-158v-Completion Q-cropped.jpg',-1.229111,0.882691,-1.302594,0.863261,-1.311207,0.862997,-1.327194,0.875693,-1.289688,0.872571
+'images/filigrees/Corale 8/C8-155v-I-2-cropped.jpg',-1.007693,0.977958,-1.012118,0.967547,-0.978126,0.973414,-1.035231,0.971542,-1.006823,0.974451
+'images/filigrees/Corale 8/Corale 8 - 0.36r.png',-1.663847,0.915534,-1.754617,0.929371,-1.731609,0.907884,-1.706702,0.911087,-1.808307,0.845438
+'images/filigrees/Corale 8/Corale 8 - 0.37v.png',-2.156612,0.919556,-2.175234,0.866123,-2.338721,0.875528,-2.056583,0.867852,-2.11791,0.90348
+'images/filigrees/Corale 8/Corale 8 - 0.37r.png',-2.194177,0.94844,-2.249577,0.916958,-2.170069,0.934224,-2.258102,0.929155,-2.190404,0.937886
+'images/filigrees/Corale 8/Corale 8 - 0.40r.png',-2.073564,0.851661,-2.021414,0.892686,-1.979943,0.849479,-1.896177,0.858175,-1.997781,0.865073
+'images/filigrees/Corale 8/Corale 8 - 0.51r.png',-2.033324,0.928334,-2.047681,0.904789,-1.958214,0.938687,-1.926433,0.948943,-2.014358,0.902122
+'images/filigrees/Corale 8/Corale 8 - 0.46v.png',-1.651496,0.894761,-1.729991,0.862431,-1.683227,0.826104,-1.670228,0.863038,-1.787973,0.812304
+'images/filigrees/Corale 8/Corale 8 - 0.46r.png',-1.939517,0.908167,-2.034171,0.867998,-1.924709,0.913939,-2.09065,0.870229,-2.028838,0.881754
+'images/filigrees/Corale 8/C8-1r-Incipit-2-cropped.jpg',-1.035429,0.890052,-1.003181,0.852469,-0.85208,0.915505,-0.8706,0.929426,-0.931734,0.909265

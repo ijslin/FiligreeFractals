@@ -1,0 +1,93 @@
+@relation case_e_color
+
+@attribute Image {'images/filigrees/Corale 5/C5-119r.jpg','images/filigrees/Corale 5/C5-31r-2-cropped.jpg','images/filigrees/Corale 5/C5-134v.jpg','images/filigrees/Corale 5/C5-135r.jpg','images/filigrees/Corale 5/C5-123r.jpg','images/filigrees/Corale 5/C5-122v.jpg','images/filigrees/Corale 5/C5-74v-cropped.jpg','images/filigrees/Corale 5/C5-138v-Jerome-croppedC.jpg','images/filigrees/Corale 5/C5-107v-Michael-cropped.jpg','images/filigrees/Corale 5/C5-114v.jpg','images/filigrees/Corale 5/C5-115r.jpg','images/filigrees/Corale 5/C5-138v-Jerome-croppedU.jpg','images/filigrees/Corale 5/C5-108r-Michael-cropped.jpg','images/filigrees/Corale 5/C5-133v-C.jpg','images/filigrees/Corale 5/C5-2r-cropped.jpg','images/filigrees/Corale 5/C5-114r.jpg','images/filigrees/Corale 5/C5-133v-U.jpg','images/filigrees/Corale 5/C5-133r-S.jpg','images/filigrees/Corale 5/C5-63r--cropped.jpg','images/filigrees/Corale 5/C5-122r.jpg','images/filigrees/Corale 5/C5-135v.jpg','images/filigrees/Corale 5/C5-30v-2-cropped.jpg','images/filigrees/Corale 5/C5-118r.jpg','images/filigrees/Corale 5/C5-119v.jpg','images/filigrees/Corale 5/C5-37r-star of david-cropped.jpg','images/filigrees/Corale 5/C5-106v-Michael-cropped.jpg','images/filigrees/Corale 5/C5-112v.jpg','images/filigrees/Corale 5/C5-129r.jpg','images/filigrees/Corale 5/C5-128v.jpg','images/filigrees/Corale 5/C5-109r.jpg','images/filigrees/Corale 5/C5-108v.jpg','images/filigrees/Corale 5/C5-132v.jpg','images/filigrees/Corale 5/C5-124v.jpg','images/filigrees/Corale 5/C5-125v.jpg','images/filigrees/Corale 5/C5-124r.jpg','images/filigrees/Corale 5/C5-132r.jpg','images/filigrees/Corale 5/C5-106r-Michael-cropped.jpg','images/filigrees/Corale 5/C5-108r.jpg','images/filigrees/Corale 5/C5-128r.jpg','images/filigrees/Corale 5/C5-129v.jpg','images/filigrees/Corale 5/C5-112r.jpg','images/filigrees/Corale 5/C5-113v.jpg','images/filigrees/Corale 5/C5-12r-cropped.jpg','images/filigrees/Corale 5/C5-130v-U.jpg','images/filigrees/Corale 5/C5-110v.jpg','images/filigrees/Corale 5/C5-111r.jpg','images/filigrees/Corale 5/C5-0-sample I-cropped.jpg','images/filigrees/Corale 5/C5-106v.jpg','images/filigrees/Corale 5/C5-127r.jpg','images/filigrees/Corale 5/C5-126v.jpg','images/filigrees/Corale 5/C5-131r.jpg','images/filigrees/Corale 5/C5-42r-cropped.jpg','images/filigrees/Corale 5/C5-44v-51r_-2-cropped.jpg','images/filigrees/Corale 5/C5-131v.jpg','images/filigrees/Corale 5/C5-130r.jpg','images/filigrees/Corale 5/C5-126r.jpg','images/filigrees/Corale 5/C5-127v.jpg','images/filigrees/Corale 5/C5-107v.jpg','images/filigrees/Corale 5/C5-16r-detail-cropped.jpg','images/filigrees/Corale 5/C5-111v.jpg','images/filigrees/Corale 5/C5-110r.jpg','images/filigrees/Corale 5/C5-130v-P.jpg','images/filigrees/Corale 5/C5-75v-pink in g-2-cropped.jpg','images/filigrees/Corale 5/C5-133r-H.jpg','images/filigrees/Corale 5/C5-120v.jpg','images/filigrees/Corale 5/C5-121r.jpg','images/filigrees/Corale 5/C5-157v-2-cropped.jpg','images/filigrees/Corale 5/C5-137r.jpg','images/filigrees/Corale 5/C5-136v.jpg','images/filigrees/Corale 5/C5-116v.jpg','images/filigrees/Corale 5/C5-35r-D Completion-2-cropped.jpg','images/filigrees/Corale 5/C5-31v-tiles-2-cropped.jpg','images/filigrees/Corale 5/C5-41v-cropped.jpg','images/filigrees/Corale 5/C5-118r copy.jpg','images/filigrees/Corale 5/C5-116r.jpg','images/filigrees/Corale 5/C5-136r.jpg','images/filigrees/Corale 5/C5-108v-Michale-2-cropped.jpg','images/filigrees/Corale 5/C5-137v.jpg'}
+@attribute 'Slope Q1' numeric
+@attribute 'R2 Q1' numeric
+@attribute 'Slope Q2' numeric
+@attribute 'R2 Q2' numeric
+@attribute 'Slope Q3' numeric
+@attribute 'R2 Q3' numeric
+@attribute 'Slope Q4' numeric
+@attribute 'R2 Q4' numeric
+@attribute 'Slope Whole' numeric
+@attribute 'R2 Whole' numeric
+
+@data
+'images/filigrees/Corale 5/C5-119r.jpg',-0.669022,0.914565,-0.717473,0.929547,-0.767032,0.942223,-0.818134,0.941718,-0.919836,0.967439
+'images/filigrees/Corale 5/C5-31r-2-cropped.jpg',-0.80815,0.945582,-0.805916,0.958021,-0.766477,0.931707,-0.807928,0.95745,-1.014382,0.969014
+'images/filigrees/Corale 5/C5-134v.jpg',-0.719681,0.939558,-0.667406,0.931936,-0.68854,0.937839,-0.640087,0.930161,-0.891134,0.960697
+'images/filigrees/Corale 5/C5-135r.jpg',-0.735364,0.950651,-0.733622,0.949788,-0.737612,0.951124,-0.728758,0.950489,-0.968262,0.960582
+'images/filigrees/Corale 5/C5-123r.jpg',-0.689935,0.93122,-0.698394,0.938481,-0.673707,0.936579,-0.699034,0.923657,-0.902058,0.966557
+'images/filigrees/Corale 5/C5-122v.jpg',-0.666009,0.898429,-0.636349,0.922385,-0.60689,0.910146,-0.649332,0.899795,-0.838883,0.960874
+'images/filigrees/Corale 5/C5-74v-cropped.jpg',-0.687137,0.947395,-0.691862,0.946185,-0.696373,0.949951,-0.648475,0.938805,-0.922477,0.929203
+'images/filigrees/Corale 5/C5-138v-Jerome-croppedC.jpg',-0.690434,0.919797,-0.645369,0.908773,-0.726675,0.924319,-0.676381,0.89405,-0.903422,0.854094
+'images/filigrees/Corale 5/C5-107v-Michael-cropped.jpg',-0.602379,0.932145,-0.521943,0.904364,-0.601271,0.928591,-0.604858,0.905168,-0.800457,0.917423
+'images/filigrees/Corale 5/C5-114v.jpg',-0.703284,0.942729,-0.65403,0.93499,-0.637843,0.934113,-0.694443,0.939588,-0.917476,0.950723
+'images/filigrees/Corale 5/C5-115r.jpg',-0.700131,0.921216,-0.713391,0.939893,-0.750871,0.939329,-0.686301,0.93836,-0.925375,0.966327
+'images/filigrees/Corale 5/C5-138v-Jerome-croppedU.jpg',-0.513734,0.882788,-0.510536,0.892528,-0.552499,0.901834,-0.507006,0.895663,-0.705653,0.941118
+'images/filigrees/Corale 5/C5-108r-Michael-cropped.jpg',-0.563651,0.918853,-0.541526,0.901447,-0.500158,0.887595,-0.525814,0.906415,-0.770692,0.920654
+'images/filigrees/Corale 5/C5-133v-C.jpg',-0.721526,0.949516,-0.667537,0.944016,-0.814331,0.944041,-0.741338,0.952749,-0.964708,0.951569
+'images/filigrees/Corale 5/C5-2r-cropped.jpg',-0.573149,0.868765,-0.547864,0.863952,-0.58035,0.843046,-0.567295,0.859129,-0.727609,0.944139
+'images/filigrees/Corale 5/C5-114r.jpg',-0.716433,0.93305,-0.863196,0.942849,-0.68826,0.937148,-0.67775,0.928952,-0.93241,0.962687
+'images/filigrees/Corale 5/C5-133v-U.jpg',-0.586715,0.916461,-0.635811,0.909913,-0.573976,0.913302,-0.583539,0.909668,-0.788204,0.953776
+'images/filigrees/Corale 5/C5-133r-S.jpg',-0.679116,0.927404,-0.675538,0.937726,-0.690745,0.935707,-0.684577,0.938201,-0.915336,0.962807
+'images/filigrees/Corale 5/C5-63r--cropped.jpg',-0.592051,0.900258,-0.553054,0.891411,-0.6135,0.894944,-0.552601,0.889679,-0.763297,0.946939
+'images/filigrees/Corale 5/C5-122r.jpg',-0.624282,0.912241,-0.565279,0.909982,-0.596161,0.922075,-0.532746,0.911262,-0.830241,0.930805
+'images/filigrees/Corale 5/C5-135v.jpg',-0.672223,0.933523,-0.67408,0.930732,-0.6562,0.92141,-0.636034,0.922653,-0.863315,0.960796
+'images/filigrees/Corale 5/C5-30v-2-cropped.jpg',-0.743729,0.947551,-0.766424,0.9498,-0.735827,0.946307,-0.759073,0.954818,-0.967265,0.963087
+'images/filigrees/Corale 5/C5-118r.jpg',-0.658059,0.936166,-0.685673,0.942011,-0.697618,0.93157,-0.690609,0.944189,-0.873082,0.945005
+'images/filigrees/Corale 5/C5-119v.jpg',-0.705618,0.925446,-0.638656,0.919877,-0.685355,0.92143,-0.666635,0.928132,-0.875522,0.963552
+'images/filigrees/Corale 5/C5-37r-star of david-cropped.jpg',-0.908343,0.968409,-0.947726,0.967363,-0.965849,0.958593,-0.937505,0.969663,-1.187051,0.955315
+'images/filigrees/Corale 5/C5-106v-Michael-cropped.jpg',-0.610471,0.930605,-0.590364,0.925399,-0.494348,0.896446,-0.548474,0.916777,-0.803926,0.923366
+'images/filigrees/Corale 5/C5-112v.jpg',-0.640315,0.893382,-0.624281,0.886264,-0.598554,0.897945,-0.578271,0.89178,-0.786252,0.957699
+'images/filigrees/Corale 5/C5-129r.jpg',-0.660189,0.921325,-0.6232,0.927108,-0.62985,0.92289,-0.620181,0.909402,-0.848278,0.95746
+'images/filigrees/Corale 5/C5-128v.jpg',-0.664863,0.898519,-0.663659,0.932655,-0.656814,0.930721,-0.676248,0.926707,-0.86332,0.962914
+'images/filigrees/Corale 5/C5-109r.jpg',-0.841748,0.961818,-0.753601,0.94572,-0.833132,0.960252,-0.811761,0.953625,-1.027274,0.971407
+'images/filigrees/Corale 5/C5-108v.jpg',-0.731531,0.932234,-0.745873,0.924196,-0.762946,0.935061,-0.74424,0.935012,-0.947048,0.968633
+'images/filigrees/Corale 5/C5-132v.jpg',-0.639179,0.87281,-0.664434,0.906958,-0.665083,0.925941,-0.654293,0.911733,-0.848668,0.957859
+'images/filigrees/Corale 5/C5-124v.jpg',-0.640471,0.920804,-0.690785,0.92738,-0.692451,0.93557,-0.652857,0.934098,-0.870466,0.963949
+'images/filigrees/Corale 5/C5-125v.jpg',-0.6705,0.916061,-0.620015,0.912284,-0.655742,0.911913,-0.65985,0.919807,-0.843017,0.959676
+'images/filigrees/Corale 5/C5-124r.jpg',-0.667134,0.919333,-0.698221,0.917015,-0.696081,0.916731,-0.662001,0.916783,-0.852729,0.953127
+'images/filigrees/Corale 5/C5-132r.jpg',-0.739591,0.933483,-0.686551,0.944408,-0.695399,0.941954,-0.643199,0.93686,-0.916985,0.949204
+'images/filigrees/Corale 5/C5-106r-Michael-cropped.jpg',-0.496042,0.854766,-0.493684,0.866261,-0.500699,0.846756,-0.487532,0.83241,-0.678858,0.942656
+'images/filigrees/Corale 5/C5-108r.jpg',-0.735695,0.940253,-0.684456,0.936251,-0.75026,0.937767,-0.701555,0.931674,-0.931166,0.955178
+'images/filigrees/Corale 5/C5-128r.jpg',-0.759141,0.92903,-0.57785,0.908802,-0.700198,0.92002,-0.648932,0.931777,-0.868282,0.960232
+'images/filigrees/Corale 5/C5-129v.jpg',-0.790057,0.956132,-0.715849,0.951598,-0.746943,0.947588,-0.690444,0.917758,-0.935312,0.933319
+'images/filigrees/Corale 5/C5-112r.jpg',-0.668679,0.923703,-0.657884,0.916906,-0.608811,0.91839,-0.607177,0.908661,-0.846627,0.958145
+'images/filigrees/Corale 5/C5-113v.jpg',-0.682204,0.937455,-0.620281,0.926762,-0.559068,0.918509,-0.576892,0.922832,-0.820782,0.941999
+'images/filigrees/Corale 5/C5-12r-cropped.jpg',-0.496059,0.895782,-0.614574,0.930584,-0.513786,0.901381,-0.507796,0.904914,-0.744448,0.940369
+'images/filigrees/Corale 5/C5-130v-U.jpg',-0.655978,0.917369,-0.666373,0.914469,-0.681188,0.930553,-0.661643,0.928884,-0.871749,0.962429
+'images/filigrees/Corale 5/C5-110v.jpg',-0.788773,0.951872,-0.752892,0.94885,-0.7713,0.9483,-0.756779,0.952459,-0.979471,0.969262
+'images/filigrees/Corale 5/C5-111r.jpg',-0.72589,0.924309,-0.706516,0.942352,-0.72358,0.935388,-0.68662,0.937332,-0.919285,0.963586
+'images/filigrees/Corale 5/C5-0-sample I-cropped.jpg',-0.933223,0.969609,-1.039106,0.973026,-0.944312,0.971335,-1.030591,0.975961,-1.221352,0.9664
+'images/filigrees/Corale 5/C5-106v.jpg',-0.682673,0.927591,-0.701982,0.943625,-0.669177,0.937417,-0.681362,0.921407,-0.900669,0.965407
+'images/filigrees/Corale 5/C5-127r.jpg',-0.770614,0.934337,-0.768892,0.945842,-0.736699,0.933073,-0.742081,0.940834,-0.942656,0.969422
+'images/filigrees/Corale 5/C5-126v.jpg',-0.825966,0.957654,-0.876872,0.958589,-0.795737,0.950109,-0.839168,0.960505,-1.068217,0.957835
+'images/filigrees/Corale 5/C5-131r.jpg',-0.772026,0.901862,-0.714038,0.898082,-0.887705,0.950831,-0.799955,0.935372,-0.927602,0.961281
+'images/filigrees/Corale 5/C5-42r-cropped.jpg',-0.528195,0.908528,-0.561792,0.918914,-0.514171,0.88935,-0.562936,0.90805,-0.770548,0.946562
+'images/filigrees/Corale 5/C5-44v-51r_-2-cropped.jpg',-0.858562,0.950194,-0.819297,0.923516,-0.887105,0.945185,-0.808926,0.922216,-1.107313,0.894706
+'images/filigrees/Corale 5/C5-131v.jpg',-0.744332,0.916605,-0.5694,0.921246,-0.666529,0.913606,-0.589868,0.926389,-0.863227,0.959026
+'images/filigrees/Corale 5/C5-130r.jpg',-0.608671,0.911454,-0.531056,0.904361,-0.541867,0.909546,-0.512828,0.897866,-0.775559,0.947419
+'images/filigrees/Corale 5/C5-126r.jpg',-0.678208,0.933328,-0.598698,0.929358,-0.643736,0.932094,-0.545468,0.914323,-0.852322,0.94275
+'images/filigrees/Corale 5/C5-127v.jpg',-0.639033,0.935861,-0.706399,0.93902,-0.603879,0.928436,-0.681053,0.926949,-0.876379,0.95291
+'images/filigrees/Corale 5/C5-107v.jpg',-0.764775,0.919168,-0.709684,0.931995,-0.669281,0.923978,-0.622892,0.923182,-0.877538,0.964183
+'images/filigrees/Corale 5/C5-16r-detail-cropped.jpg',-0.864093,0.955849,-0.829921,0.93848,-0.831184,0.95464,-0.845433,0.929538,-1.084373,0.894023
+'images/filigrees/Corale 5/C5-111v.jpg',-0.788238,0.946923,-0.775504,0.949406,-0.750263,0.939718,-0.727757,0.945387,-0.973454,0.960606
+'images/filigrees/Corale 5/C5-110r.jpg',-0.597467,0.915269,-0.641693,0.915645,-0.624991,0.916301,-0.555294,0.910327,-0.821394,0.952399
+'images/filigrees/Corale 5/C5-130v-P.jpg',-0.772845,0.95367,-0.747219,0.951756,-0.799628,0.955128,-0.747386,0.945019,-1.007574,0.949458
+'images/filigrees/Corale 5/C5-75v-pink in g-2-cropped.jpg',-0.904477,0.96599,-0.866082,0.960485,-0.870313,0.962424,-0.834533,0.953507,-1.111867,0.942246
+'images/filigrees/Corale 5/C5-133r-H.jpg',-0.748607,0.936652,-0.761,0.913674,-0.758879,0.94101,-0.68404,0.940012,-0.936648,0.966285
+'images/filigrees/Corale 5/C5-120v.jpg',-0.712094,0.941876,-0.663851,0.934487,-0.705383,0.942389,-0.700751,0.935773,-0.922475,0.959837
+'images/filigrees/Corale 5/C5-121r.jpg',-0.756449,0.946868,-0.788574,0.951359,-0.761254,0.939296,-0.75634,0.888507,-0.96287,0.968963
+'images/filigrees/Corale 5/C5-157v-2-cropped.jpg',-0.84046,0.944066,-0.803551,0.916762,-0.829262,0.940527,-0.780374,0.911148,-1.05014,0.867993
+'images/filigrees/Corale 5/C5-137r.jpg',-0.802591,0.91942,-0.642705,0.910124,-0.733928,0.911572,-0.747183,0.922553,-0.896529,0.961966
+'images/filigrees/Corale 5/C5-136v.jpg',-0.69693,0.919736,-0.698502,0.92744,-0.700843,0.923749,-0.661856,0.920992,-0.884838,0.958105
+'images/filigrees/Corale 5/C5-116v.jpg',-0.670951,0.935231,-0.695926,0.929649,-0.688283,0.930926,-0.637458,0.928808,-0.885614,0.963417
+'images/filigrees/Corale 5/C5-35r-D Completion-2-cropped.jpg',-0.915606,0.960001,-0.948032,0.967027,-0.918246,0.962662,-0.930269,0.959598,-1.183117,0.934656
+'images/filigrees/Corale 5/C5-31v-tiles-2-cropped.jpg',-0.913868,0.943657,-0.897365,0.935673,-0.892313,0.924544,-0.889149,0.929824,-1.161112,0.899072
+'images/filigrees/Corale 5/C5-41v-cropped.jpg',-0.580657,0.907825,-0.503157,0.903713,-0.533289,0.909808,-0.508443,0.904968,-0.754781,0.936782
+'images/filigrees/Corale 5/C5-118r copy.jpg',-0.652221,0.922753,-0.626804,0.920708,-0.594482,0.908227,-0.589298,0.914948,-0.828562,0.955243
+'images/filigrees/Corale 5/C5-116r.jpg',-0.761509,0.931751,-0.709783,0.93433,-0.843145,0.929469,-0.677849,0.929953,-0.957943,0.95328
+'images/filigrees/Corale 5/C5-136r.jpg',-0.682932,0.944776,-0.8011,0.936785,-0.781627,0.946827,-0.624138,0.92855,-0.942134,0.950931
+'images/filigrees/Corale 5/C5-108v-Michale-2-cropped.jpg',-0.869782,0.960691,-0.862259,0.950016,-0.902804,0.960172,-0.861164,0.946673,-1.135599,0.923099
+'images/filigrees/Corale 5/C5-137v.jpg',-0.753628,0.934328,-0.664483,0.938885,-0.768667,0.927361,-0.674575,0.938573,-0.916806,0.966305
