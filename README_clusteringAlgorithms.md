@@ -2,7 +2,7 @@
 
 ## Clusterers Package Information: https://weka.sourceforge.io/doc.dev/weka/clusterers/package-summary.html
 
-## Other Sourced:
+## Other Sources:
 ### https://ijiset.com/vol7/v7s10/IJISET_V7_I10_31.pdf
 ### https://www.tutorialspoint.com/weka/weka_clustering.htm
 ### https://waikato.github.io/weka-wiki/using_cluster_algorithms/#clustermembership
