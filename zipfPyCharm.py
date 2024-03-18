@@ -677,6 +677,44 @@ def case_tests(test_code, image_type):
         writer.writerows(rows)
 
 
+def get_book_number(list):
+    link = list[0].split("/")
+    book = link[2]
+
+    if book == "Corale 1":
+        list.append(1)
+    elif book == "Corale 3":
+        list.append(3)
+    elif book == "Corale 5":
+        list.append(5)
+    elif book == "Corale 6":
+        list.append(6)
+    elif book == "Corale 7":
+        list.append(7)
+    elif book == "Corale 8":
+        list.append(8)
+    elif book == "Corale 9":
+        list.append(9)
+    elif book == "Corale 11":
+        list.append(11)
+    elif book == "Corale 12":
+        list.append(12)
+    elif book == "Corale 13":
+        list.append(13)
+    elif book == "Corale 14":
+        list.append(14)
+    elif book == "Corale 15":
+        list.append(15)
+    elif book == "Corale 16":
+        list.append(16)
+    elif book == "Corale 17":
+        list.append(17)
+    elif book == "Corale 18":
+        list.append(18)
+    elif book == "Corale 19":
+        list.append(19)
+
+
 def all_cases(image_type):
     links = []
     rows = []
@@ -693,6 +731,8 @@ def all_cases(image_type):
     for link in links:
         results = [link]
 
+        get_book_number(results)
+
         if image_type == "edge":
             image = get_image(link)
             recursive(image, results, 1)
@@ -706,7 +746,7 @@ def all_cases(image_type):
         row = []
 
         for result in results:
-            if isinstance(result, str):
+            if isinstance(result, str) | isinstance(result, int):
                 row.append(result)
             else:
                 row.append(result[0])
@@ -716,12 +756,14 @@ def all_cases(image_type):
 
     with open(file_name, "w") as file:
         writer = csv.writer(file)
-        writer.writerow(["Image", "Slope Q1", "R2 Q1", "Slope Q2", "R2 Q2", "Slope Q3", "R2 Q3", "Slope Q4", "R2 Q4",
-                         "Slope Whole", "R2 Whole"])
+        writer.writerow(["Image", "Book Number", "Slope Q1", "R2 Q1", "Slope Q2", "R2 Q2", "Slope Q3", "R2 Q3",
+                         "Slope Q4", "R2 Q4", "Slope Whole", "R2 Whole"])
         writer.writerows(rows)
 
 
 def main():
+    # case_tests('f', "edge")
+    # case_tests('f', "color")
     all_cases("edge")
     all_cases("color")
 
