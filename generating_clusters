@@ -1,0 +1,35 @@
+// Java Program to Illustrate Usage of Weka API
+
+// Importing required classes
+import java.io.BufferedReader;
+import java.io.FileReader;
+
+import weka.clusterers.SimpleKMeans;
+import weka.core.Instances;
+
+
+public class generating_clusters {
+
+
+
+    public static void main(String[] args) throws Exception {
+        BufferedReader breader;
+        Instances Train;
+
+        // TODO Auto-generated constructor stub
+        breader = new BufferedReader(new FileReader(
+                "./.arffs/iris.arff"));
+        Train = new Instances(breader);
+        SimpleKMeans kMeans = new SimpleKMeans();
+        kMeans.setSeed(10);
+        kMeans.setPreserveInstancesOrder(true);
+        kMeans.setNumClusters(3);
+        kMeans.buildClusterer(Train);
+        int[] assignments = kMeans.getAssignments();
+        int i = 0;
+        for (int clusterNum : assignments) {
+            System.out.printf("Instance %d -> Cluster %d", i, clusterNum);
+            i++;
+        }
+    }
+}
