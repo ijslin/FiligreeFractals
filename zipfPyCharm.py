@@ -772,6 +772,7 @@ def get_path_GUI():
 
 def write_csv(images):
     rows = []
+    csv_file_name = "filigrees.csv"
 
     for i in range(len(images)):
         results = [images[i]]
@@ -790,11 +791,99 @@ def write_csv(images):
 
         rows.append(row)
 
-    with open("filigrees.csv", "w") as file:
+    with open(csv_file_name, "w") as file:
         writer = csv.writer(file)
         writer.writerow(["Image", "Book Number", "Slope Q1", "R2 Q1", "Slope Q2", "R2 Q2", "Slope Q3", "R2 Q3",
                          "Slope Q4", "R2 Q4", "Slope Whole", "R2 Whole"])
         writer.writerows(rows)
+
+    convert_to_arff(csv_file_name)
+
+
+def convert_to_arff(csv_file_name):
+    csv_file = csv_file_name
+    arff_file = csv_file_name.replace(".csv", ".arff")
+    relation = "Filigree Images"
+
+    data_type = ["nominal", "nominal", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric",
+                 "numeric", "numeric", "numeric", "numeric"]
+    columns_temp = []
+    unique_temp = []
+    unique_of_column = []
+    data_type_temp = []
+    final_data_type = []
+    att_types = []
+    p = 0
+
+    write_file = open(arff_file, "w")
+
+    f = open(csv_file, "r")
+    reader = csv.reader(f)
+    all_data = list(reader)
+    attributes = all_data[0]
+    total_columns = len(attributes)
+    total_rows = len(all_data)
+    f.close()
+
+    for j in range(0, total_columns):
+        for i in range(0, total_rows):
+            if len(all_data[i][j]) == 0:
+                all_data[i][j] = "0"
+
+    for j in range(0, total_columns):
+        for i in range(1, total_rows):
+            all_data[i][j] = all_data[i][j].lower()
+            if "\r" in all_data[i][j] or '\r' in all_data[i][j] or "\n" in all_data[i][j] or '\n' in all_data[i][j]:
+                all_data[i][j] = all_data[i][j].rstrip(os.linesep)
+                all_data[i][j] = all_data[i][j].rstrip("\n")
+                all_data[i][j] = all_data[i][j].rstrip("\r")
+            try:
+                if all_data[i][j] == str(float(all_data[i][j])) or all_data[i][j] == str(int(all_data[i][j])):
+                    print()
+            except ValueError as e:
+                all_data[i][j] = "'" + all_data[i][j] + "'"
+
+    for j in range(0, total_columns):
+        for i in range(1, total_rows):
+            columns_temp.append(all_data[i][j])
+        for item in columns_temp:
+            if not (item in unique_temp):
+                unique_temp.append(item)
+        unique_of_column.append("{" + ','.join(unique_temp) + "}")
+        unique_temp = []
+        columns_temp = []
+
+    for j in range(0, total_columns):
+        p = j
+        for i in range(0, (total_rows - 1)):
+            data_type_temp.append(data_type[p])
+            p += total_columns
+        if "nominal" in data_type_temp:
+            final_data_type.append("nominal")
+        else:
+            final_data_type.append("numeric")
+        data_type_temp = []
+
+    for i in range(0, len(final_data_type)):
+        if final_data_type[i] == "nominal":
+            att_types.append(unique_of_column[i])
+        else:
+            att_types.append(final_data_type[i])
+
+    write_file.write("%\n% Comments go after a '%' sign.\n%\n")
+    write_file.write("%\n% Relation: " + relation + "\n%\n%\n")
+    write_file.write("% Attributes: " + str(total_columns) + " " * 5 + "Instances: " + str(total_rows - 1)
+                     + "\n%\n%\n\n")
+
+    write_file.write("@relation " + relation + "\n\n")
+
+    for i in range(0, total_columns):
+        write_file.write("@attribute" + " '" + attributes[i] + "' " + att_types[i] + "\n")
+
+    write_file.write("\n@data\n")
+
+    for i in range(1, total_rows):
+        write_file.write(','.join(all_data[i]) + "\n")
 
 
 def run_selectable_images():
