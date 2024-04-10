@@ -683,38 +683,38 @@ def get_book_number(list):
     link = list[0].split("/")
     book = link[-2]
 
-    if book == "Corale 1":
-        list.append("1")
-    elif book == "Corale 3":
-        list.append("3")
+    if book == "Corale 3":
+        list.append(3)
     elif book == "Corale 5":
-        list.append("5")
+        list.append(5)
     elif book == "Corale 6":
-        list.append("6")
+        list.append(6)
     elif book == "Corale 7":
-        list.append("7")
+        list.append(7)
     elif book == "Corale 8":
-        list.append("8")
+        list.append(8)
     elif book == "Corale 9":
-        list.append("9")
+        list.append(9)
     elif book == "Corale 11":
-        list.append("11")
+        list.append(11)
     elif book == "Corale 12":
-        list.append("12")
+        list.append(12)
     elif book == "Corale 13":
-        list.append("13")
+        list.append(13)
     elif book == "Corale 14":
-        list.append("14")
+        list.append(14)
     elif book == "Corale 15":
-        list.append("15")
+        list.append(15)
     elif book == "Corale 16":
-        list.append("16")
+        list.append(16)
     elif book == "Corale 17":
-        list.append("17")
+        list.append(17)
     elif book == "Corale 18":
-        list.append("18")
+        list.append(18)
     elif book == "Corale 19":
-        list.append("19")
+        list.append(19)
+    elif book == "Corale 1":
+        list.append(1)
 
 
 def all_cases(image_type):
@@ -803,10 +803,11 @@ def write_csv(images):
 def convert_to_arff(csv_file_name):
     csv_file = csv_file_name
     arff_file = csv_file_name.replace(".csv", ".arff")
-    relation = "Filigree Images"
+    relation = "Filigree_Images"
 
     data_type = ["nominal", "nominal", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric",
                  "numeric", "numeric", "numeric", "numeric"]
+    # data_type = []
     columns_temp = []
     unique_temp = []
     unique_of_column = []
@@ -814,8 +815,6 @@ def convert_to_arff(csv_file_name):
     final_data_type = []
     att_types = []
     p = 0
-
-    write_file = open(arff_file, "w")
 
     f = open(csv_file, "r")
     reader = csv.reader(f)
@@ -853,11 +852,19 @@ def convert_to_arff(csv_file_name):
         unique_temp = []
         columns_temp = []
 
+    # for j in range(1, total_rows):
+    #     for i in range(0, total_columns):
+    #         try:
+    #             if all_data[j][i] == str(float(all_data[j][i])) or all_data[j][i] == str(int(all_data[j][i])):
+    #                 data_type.append("numeric")
+    #         except ValueError as e:
+    #             data_type.append("nominal")
+
     for j in range(0, total_columns):
         p = j
         for i in range(0, (total_rows - 1)):
             data_type_temp.append(data_type[p])
-            p += total_columns
+            # p += total_columns
         if "nominal" in data_type_temp:
             final_data_type.append("nominal")
         else:
@@ -870,17 +877,19 @@ def convert_to_arff(csv_file_name):
         else:
             att_types.append(final_data_type[i])
 
+    write_file = open(arff_file, "w")
+
     write_file.write("%\n% Comments go after a '%' sign.\n%\n")
     write_file.write("%\n% Relation: " + relation + "\n%\n%\n")
     write_file.write("% Attributes: " + str(total_columns) + " " * 5 + "Instances: " + str(total_rows - 1)
                      + "\n%\n%\n\n")
 
-    write_file.write("@relation " + relation + "\n\n")
+    write_file.write("@RElATION " + relation + "\n\n")
 
     for i in range(0, total_columns):
-        write_file.write("@attribute" + " '" + attributes[i] + "' " + att_types[i] + "\n")
+        write_file.write("@ATTRIBUTE" + " '" + attributes[i] + "' " + att_types[i] + "\n")
 
-    write_file.write("\n@data\n")
+    write_file.write("\n@DATA\n")
 
     for i in range(1, total_rows):
         write_file.write(','.join(all_data[i]) + "\n")
@@ -893,6 +902,7 @@ def run_selectable_images():
 
 def main():
     run_selectable_images()
+    # convert_to_arff("iris.csv")
 
 
 main()
