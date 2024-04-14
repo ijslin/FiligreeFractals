@@ -797,7 +797,7 @@ def write_csv(images):
                          "Slope Q4", "R2 Q4", "Slope Whole", "R2 Whole"])
         writer.writerows(rows)
 
-    convert_to_arff(csv_file_name)
+    # convert_to_arff(csv_file_name)
 
 
 def convert_to_arff(csv_file_name):
@@ -824,13 +824,13 @@ def convert_to_arff(csv_file_name):
     total_rows = len(all_data)
     f.close()
 
-    for j in range(0, total_columns):
-        for i in range(0, total_rows):
+    for j in range(total_columns):
+        for i in range(total_rows):
             if len(all_data[i][j]) == 0:
                 all_data[i][j] = "0"
 
-    for j in range(0, total_columns):
-        for i in range(1, total_rows):
+    for j in range(total_columns):
+        for i in range(1, (total_rows - 1)):
             all_data[i][j] = all_data[i][j].lower()
             if "\r" in all_data[i][j] or '\r' in all_data[i][j] or "\n" in all_data[i][j] or '\n' in all_data[i][j]:
                 all_data[i][j] = all_data[i][j].rstrip(os.linesep)
@@ -842,8 +842,8 @@ def convert_to_arff(csv_file_name):
             except ValueError as e:
                 all_data[i][j] = "'" + all_data[i][j] + "'"
 
-    for j in range(0, total_columns):
-        for i in range(1, total_rows):
+    for j in range(total_columns):
+        for i in range(1, (total_rows - 1)):
             columns_temp.append(all_data[i][j])
         for item in columns_temp:
             if not (item in unique_temp):
@@ -860,9 +860,9 @@ def convert_to_arff(csv_file_name):
     #         except ValueError as e:
     #             data_type.append("nominal")
 
-    for j in range(0, total_columns):
+    for j in range(total_columns):
         p = j
-        for i in range(0, (total_rows - 1)):
+        for i in range((total_rows - 1)):
             data_type_temp.append(data_type[p])
             # p += total_columns
         if "nominal" in data_type_temp:
@@ -871,7 +871,7 @@ def convert_to_arff(csv_file_name):
             final_data_type.append("numeric")
         data_type_temp = []
 
-    for i in range(0, len(final_data_type)):
+    for i in range(len(final_data_type)):
         if final_data_type[i] == "nominal":
             att_types.append(unique_of_column[i])
         else:
@@ -886,12 +886,12 @@ def convert_to_arff(csv_file_name):
 
     write_file.write("@RElATION " + relation + "\n\n")
 
-    for i in range(0, total_columns):
+    for i in range(total_columns):
         write_file.write("@ATTRIBUTE" + " '" + attributes[i] + "' " + att_types[i] + "\n")
 
     write_file.write("\n@DATA\n")
 
-    for i in range(1, total_rows):
+    for i in range(1, (total_rows - 1)):
         write_file.write(','.join(all_data[i]) + "\n")
 
 
