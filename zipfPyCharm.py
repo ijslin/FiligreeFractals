@@ -108,7 +108,7 @@ def euclidean(a, b):
         sum = 0
 
         for i in range(len(b)):
-            if isinstance(a[i], str) | isinstance(b[i], str):
+            if isinstance(a[i], str) or isinstance(b[i], str):
                 continue
             else:
                 dx = b[i][0] - a[i][0]
@@ -193,7 +193,7 @@ def get_links(author, number_of_images, list):
     gherarducci.remove(".DS_Store")
     camaldolese.remove(".DS_Store")
 
-    if (author == "Monaco") | (author == "monaco"):
+    if (author == "Monaco") or (author == "monaco"):
         images = number_of_images
         if images > len(monaco):
             images = len(monaco)
@@ -204,7 +204,7 @@ def get_links(author, number_of_images, list):
             link = slug + monaco[i]
             list.append(link)
 
-    elif (author == "Roselli") | (author == "roselli"):
+    elif (author == "Roselli") or (author == "roselli"):
         images = number_of_images
         if images > len(roselli):
             images = len(roselli)
@@ -215,7 +215,7 @@ def get_links(author, number_of_images, list):
             link = slug + roselli[i]
             list.append(link)
 
-    elif (author == "Gherarducci") | (author == "gherarducci"):
+    elif (author == "Gherarducci") or (author == "gherarducci"):
         images = number_of_images
         if images > len(gherarducci):
             images = len(gherarducci)
@@ -226,7 +226,7 @@ def get_links(author, number_of_images, list):
             link = slug + gherarducci[i]
             list.append(link)
 
-    elif (author == "Camaldolese") | (author == "camaldolese"):
+    elif (author == "Camaldolese") or (author == "camaldolese"):
         images = number_of_images
         if images > len(camaldolese):
             images = len(camaldolese)
@@ -715,6 +715,48 @@ def get_book_number(list):
         list.append(19)
     elif book == "Corale 1":
         list.append(1)
+    else:
+        list.append(0)
+
+
+def get_book_by_file(list):
+    link = list[0].split("/")
+    image = link[-1]
+
+    if "C3" in image:
+        list.append(3)
+    elif "C5" in image:
+        list.append(5)
+    elif "C6" in image:
+        list.append(6)
+    elif "C7" in image:
+        list.append(7)
+    elif "C8" in image or "Corale 8" in image:
+        list.append(8)
+    elif "C9" in image:
+        list.append(9)
+    elif "C11" in image:
+        list.append(11)
+    elif "C12" in image:
+        list.append(12)
+    elif "C13" in image:
+        list.append(13)
+    elif "C14" in image or "C-" in image:
+        list.append(14)
+    elif "C15" in image:
+        list.append(15)
+    elif "C16" in image:
+        list.append(16)
+    elif "C17" in image:
+        list.append(17)
+    elif "C18" in image:
+        list.append(18)
+    elif "C19" in image or "Chp 19" in image:
+        list.append(19)
+    elif "C1" in image:
+        list.append(1)
+    else:
+        list.append(0)
 
 
 def all_cases(image_type):
@@ -748,7 +790,7 @@ def all_cases(image_type):
         row = []
 
         for result in results:
-            if isinstance(result, str) | isinstance(result, int):
+            if isinstance(result, str) or isinstance(result, int):
                 row.append(result)
             else:
                 row.append(result[0])
@@ -772,18 +814,20 @@ def get_path_GUI():
 
 def write_csv(images):
     rows = []
-    csv_file_name = "filigrees.csv"
+    file_name = "filigrees.csv"
+    csv_file_name = os.path.join(os.path.expanduser('~'), 'Documents', file_name)
 
     for i in range(len(images)):
         results = [images[i]]
-        get_book_number(results)
+        get_book_by_file(results)
+
         row = []
 
         filigree = get_image(images[i])
         recursive(filigree, results, 1)
 
         for result in results:
-            if isinstance(result, str) | isinstance(result, int):
+            if isinstance(result, str) or isinstance(result, int):
                 row.append(result)
             else:
                 row.append(result[0])
@@ -797,7 +841,7 @@ def write_csv(images):
                          "Slope Q4", "R2 Q4", "Slope Whole", "R2 Whole"])
         writer.writerows(rows)
 
-    # convert_to_arff(csv_file_name)
+    convert_to_arff(csv_file_name)
 
 
 def convert_to_arff(csv_file_name):
