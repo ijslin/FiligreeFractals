@@ -37,16 +37,18 @@ def get_image(link):
 
 
 def get_image_gray(link):
+    # Creates an image object using a raw string to find image in a directory
     image = Image.open(link)
-    image = image.convert("L")
+    image = image.convert("L")  # Grayscales the image
 
-    return image
+    return image  # Returns the image object
 
 
 def get_image_color(link):
+    # Creates an image object using a raw string to find image in a directory
     image = Image.open(link)
 
-    return image
+    return image  # Returns the image object
 
 
 def get_quadrants(image):
@@ -82,13 +84,16 @@ def get_zipf_color(image):
     return slope, r2
 
 
+# This function gets the histogram of the shades in an image and the
+# slope, r2, and yint and returns the histogram with the slope and r2 values
 def get_zipf_gray_edge(image):
     histogram = count_shades(image)  # Creates a histogram using the image object
     counts = list(histogram.values())  # creates a list using the histogram values
 
     slope, r2, yint = byRank(counts)  # Organizes list by rank and returns the slope, r2, and yint of the image
 
-    return histogram, (slope, r2)  # Returns only the slope and r2 as those are the only ones necessary for the Euclidean distance
+    return histogram, (slope, r2)  # Returns only the slope and r2 as those are the only ones necessary for the
+    # Euclidean distance
 
 
 def euclidean(a, b):
@@ -117,9 +122,9 @@ def euclidean(a, b):
 
         result = sqrt(sum)
 
-    return result
+    return result  # returns the Euclidean Distance
 
-
+# Gets the slope and r2 values for the image
 def get_zipf(histogram):
     counts = list(histogram.values())  # creates a list using the histogram values
 
@@ -128,6 +133,8 @@ def get_zipf(histogram):
     return slope, r2
 
 
+# Recursively breaks down the image into quadrants and gets the histograms,
+# merges them, and adds the histogram to the list
 def recursive(image, list, depth):
     if depth == 0:
         histogram, point = get_zipf_gray_edge(image)
@@ -147,6 +154,7 @@ def recursive(image, list, depth):
         list.append(get_zipf(histogram1))
 
 
+# A test of the recursive function
 def recursive_test():
     print("Test of Recursive Algorithm with 4 Images:")
     print()
@@ -182,6 +190,7 @@ def recursive_test():
     print()
 
 
+# Get the links of the images based on author last name
 def get_links(author, number_of_images, list):
     monaco = os.listdir("images/filigrees/Monaco/")
     roselli = os.listdir("images/filigrees/Roselli")
@@ -238,6 +247,7 @@ def get_links(author, number_of_images, list):
             list.append(link)
 
 
+# Gets filigrees in specified book number and adds to the specified list
 def get_filigree_by_book(book_number, list):
     corale = ""
     slug = ""
@@ -297,6 +307,7 @@ def get_filigree_by_book(book_number, list):
         list.append(url)
 
 
+# Adds all links from every book to the specified list
 def get_all_links(list):
     get_filigree_by_book(1, list)
     get_filigree_by_book(3, list)
@@ -316,6 +327,7 @@ def get_all_links(list):
     get_filigree_by_book(19, list)
 
 
+# A test to check filigrees with the same known author
 def same_author():
     print("Test with Multiple Filigrees with the Same Known Author:")
     print()
@@ -349,6 +361,7 @@ def same_author():
     print()
 
 
+# A test to check filigrees with different known authors
 def different_authors():
     print("Test with Multiple Filigrees with Different Known Authors:")
     print()
@@ -383,6 +396,7 @@ def different_authors():
         print()
 
 
+# The first experiment
 def experiment_1(image_type):
     links = []
     get_links("Monaco", 15, links)
@@ -464,6 +478,7 @@ def experiment_1(image_type):
                     print()
 
 
+# A test run with all of the filigree images
 def all_images():
     links = []
     get_all_links(links)
@@ -496,12 +511,14 @@ def all_images():
     file.close()
 
 
+# Merge the two provided dictionaries
 def merge_dicts(dict1, dict2):
     for entry in dict2:
         # Adds the counts of same keys and creates new keys if they don't exist
         dict1[entry] = dict1.get(entry, 0) + dict2.get(entry, 0)
 
 
+# A test of merge_dicts()
 def dict_merge_test():
     dict1 = {'a': 1, 'b': 2}
     dict2 = {'a': 3, 'b': 4}
@@ -509,6 +526,7 @@ def dict_merge_test():
     print(dict1)
 
 
+# A test run to get vectors for all images and write to a CSV file
 def get_vectors(image_type):
     links = []
     get_all_links(links)
@@ -568,6 +586,7 @@ def get_vectors(image_type):
         writer.writerows(rows)
 
 
+# A test of a faster version of the previous function
 def all_images_quick(image_type):
     links = []
     get_all_links(links)
@@ -628,11 +647,13 @@ def all_images_quick(image_type):
     file.close()
 
 
+# Runs the specified test cases
 def case_tests(test_code, image_type):
     links = []
     rows = []
     file_name = "case_" + test_code + "_" + image_type + ".csv"
 
+    # Gets a different book based on the case letter
     if test_code == 'a':
         get_filigree_by_book(16, links)
     elif test_code == 'b':
@@ -648,6 +669,7 @@ def case_tests(test_code, image_type):
     elif test_code == 'g':
         get_filigree_by_book(15, links)
 
+    # Gets all slopes and r2 values in the specified image type
     for link in links:
         results = [link]
 
@@ -663,15 +685,17 @@ def case_tests(test_code, image_type):
 
         row = []
 
+        # Add information from results to row
         for result in results:
             if isinstance(result, str):
                 row.append(result)
             else:
                 row.append(result[0])
                 row.append(result[1])
-
+        # add the row to rows
         rows.append(row)
 
+    # Write the rows to the CSV file
     with open(file_name, "w") as file:
         writer = csv.writer(file)
         writer.writerow(["Image", "Slope Q1", "R2 Q1", "Slope Q2", "R2 Q2", "Slope Q3", "R2 Q3", "Slope Q4", "R2 Q4",
@@ -679,6 +703,7 @@ def case_tests(test_code, image_type):
         writer.writerows(rows)
 
 
+# Get the book number from the folder
 def get_book_number(list):
     link = list[0].split("/")
     book = link[-2]
@@ -719,6 +744,7 @@ def get_book_number(list):
         list.append(0)
 
 
+# Get the book number by the file name
 def get_book_by_file(list):
     link = list[0].split("/")
     image = link[-1]
@@ -759,6 +785,7 @@ def get_book_by_file(list):
         list.append(0)
 
 
+# Run all cases
 def all_cases(image_type):
     links = []
     rows = []
@@ -805,6 +832,7 @@ def all_cases(image_type):
         writer.writerows(rows)
 
 
+# Allow users to select files to run through the algroithm
 def get_path_GUI():
     root = tk.Tk()
     root.withdraw()
@@ -812,6 +840,7 @@ def get_path_GUI():
     return file_paths
 
 
+# Write CSV file
 def write_csv(images):
     rows = []
     file_name = "filigrees.csv"
@@ -844,6 +873,7 @@ def write_csv(images):
     convert_to_arff(csv_file_name)
 
 
+# Convert CSV file to ARFF for Weka
 def convert_to_arff(csv_file_name):
     csv_file = csv_file_name
     arff_file = csv_file_name.replace(".csv", ".arff")
@@ -939,6 +969,7 @@ def convert_to_arff(csv_file_name):
         write_file.write(','.join(all_data[i]) + "\n")
 
 
+# Function for the application
 def run_selectable_images():
     files = get_path_GUI()
     write_csv(files)
